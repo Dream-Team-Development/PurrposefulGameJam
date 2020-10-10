@@ -96,5 +96,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spriteRenderer: {fileID: 2588657955619293473}
+  _points: 10
   _spawnPos: {x: 0, y: 5}
-  _removePos: {x: 0, y: -5}
+  _hitPos: {x: 0, y: -3}
+  _despawnPos: {x: 0, y: -10}
