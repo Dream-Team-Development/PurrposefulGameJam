@@ -7,11 +7,13 @@ namespace RhythmGame
     [RequireComponent(typeof(SpriteRenderer))]
     public class MusicNote : MonoBehaviour
     {
+        private enum Player { One, Two }
         private enum Direction { Down, Left, Right, Up }
         
         [SerializeField] private SpriteRenderer _spriteRenderer;
         [SerializeField] private Sprite[] _noteSprites;
 
+        [SerializeField] private Player _thisPlayer = Player.One;
         [SerializeField] private int _points = 10;
         [SerializeField] private Vector2 _spawnPos = new Vector2(0, 5);
         [SerializeField] private Vector2 _hitPos = new Vector2(0, 5);
@@ -27,7 +29,7 @@ namespace RhythmGame
         {
             if (!_spriteRenderer) _spriteRenderer = GetComponent<SpriteRenderer>();
 
-            switch (Random.Range(1, 4))
+            switch (Random.Range(1, 5))
             {
                 case 1:
                     _spriteRenderer.sprite = _noteSprites[0];
@@ -62,19 +64,19 @@ namespace RhythmGame
             switch (_thisDirection)
             {
                 case Direction.Down:
-                    CheckHit(KeyCode.DownArrow);
+                    CheckHit(_thisPlayer == Player.One ? KeyCode.S : KeyCode.DownArrow);
                     break;
                 
                 case Direction.Left:
-                    CheckHit(KeyCode.LeftArrow);
+                    CheckHit(_thisPlayer == Player.One ? KeyCode.A : KeyCode.LeftArrow);
                     break;
                 
                 case Direction.Right:
-                    CheckHit(KeyCode.RightArrow);
+                    CheckHit(_thisPlayer == Player.One ? KeyCode.D : KeyCode.RightArrow);
                     break;
                 
                 case Direction.Up:
-                    CheckHit(KeyCode.UpArrow);
+                    CheckHit(_thisPlayer == Player.One ? KeyCode.W : KeyCode.UpArrow);
                     break;
 
                 default:
@@ -90,7 +92,7 @@ namespace RhythmGame
 
             if (transform.position.y <= _despawnPos.y)
             {
-                PointsManager.Instance.Points -= _points;
+                PointsManager.Instance.P1Points -= _points;
                 Destroy(gameObject);
             }
 
@@ -122,13 +124,32 @@ namespace RhythmGame
         {
             if (hit)
             {
-                PointsManager.Instance.Points += _points;
+                switch (_thisPlayer)
+                {
+                    case Player.One:
+                        PointsManager.Instance.P1Points += _points;
+                        break;
+                    case Player.Two:
+                        PointsManager.Instance.P2Points += _points;
+                        break;
+                    default:
+                        throw new ArgumentOutOfRangeException();
+                }
             }
             else if (!hit)
             {
-                PointsManager.Instance.Points -= _points / 2;
+                switch (_thisPlayer)
+                {
+                    case Player.One:
+                        PointsManager.Instance.P1Points -= _points / 2;
+                        break;
+                    case Player.Two:
+                        PointsManager.Instance.P2Points -= _points / 2;
+                        break;
+                    default:
+                        throw new ArgumentOutOfRangeException();
+                }
             }
-            
             
             Destroy(gameObject);
         }

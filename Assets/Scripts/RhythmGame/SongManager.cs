@@ -2,13 +2,12 @@
 
 namespace RhythmGame
 {
-    [RequireComponent(typeof(AudioSource))]
     public class SongManager : MonoBehaviour
     {
         public static SongManager Instance;
         
         [SerializeField] private AudioSource _audioSource;
-        [SerializeField] private MusicNote _notePrefab;
+        [SerializeField] private MusicNote[] _notePrefabs;
         [SerializeField] private float _bpm;
         [SerializeField] private int _beatsShownInAdvance = 3;
         [SerializeField] private float[] _notes;
@@ -54,15 +53,20 @@ namespace RhythmGame
             // Calculate current position (in beats)
             _songPosInBeats = _songPosition / _secPerBeat;
             
-            // Check end of song is reached or next note should be spawned
+            //Check end of song is reached or next note should be spawned
             if (_nextIndex < _notes.Length && _notes[_nextIndex] < _songPosInBeats + _beatsShownInAdvance)
             {
-                if (_notePrefab) Instantiate(_notePrefab, _notePrefab.SpawnPos, Quaternion.identity);
-
+                if (_notePrefabs.Length != 0)
+                {
+                    // 0 == Player 1, 1 == Player 2
+                    Instantiate(_notePrefabs[0], _notePrefabs[0].SpawnPos, Quaternion.identity);
+                    Instantiate(_notePrefabs[1], _notePrefabs[1].SpawnPos, Quaternion.identity);
+                }
+                
                 _nextIndex++;
             }
-            
-            if(_nextIndex == _notes.Length) _audioSource.Stop();
+
+            if(_nextIndex >= _notes.Length) _audioSource.Stop();
         }
     }
 }
