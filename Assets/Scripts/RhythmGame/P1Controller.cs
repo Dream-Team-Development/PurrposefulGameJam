@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace RhythmGame
 {
@@ -7,11 +8,7 @@ namespace RhythmGame
     {
         private void Update()
         {
-            if (!_noteToHit)
-            {
-                Debug.Log("No note found");
-                return;
-            }
+            if (!_noteToHit) return;
             
             switch (_noteToHit.ThisDirection)
             {
@@ -34,31 +31,49 @@ namespace RhythmGame
                 default:
                     throw new ArgumentOutOfRangeException();
             }
+
+            // Missed completely
+            if (_noteToHit.transform.position.y >= _noteToHit.DespawnPos.y && _noteToHit.transform.position.y <= _noteToHit.HitPos.y - 2)
+            {
+                GuiManager.Instance.P1Weight -= _noteToHit.Points;
+                _noteToHit.TriggerFloatingText("Missed!");
+                
+                Destroy(_noteToHit.gameObject);
+            }
         }
 
 
         private void CheckHit(KeyCode keyToHit)
         {
-            Debug.Log("Checking hit");
-            
             if (!Input.GetKeyDown(keyToHit)) return;
 
+            // On time
             if (_noteToHit.transform.position.y <= _noteToHit.HitPos.y + 1 && _noteToHit.transform.position.y >= _noteToHit.HitPos.y - 1)
-                Hit(true);
+                Hit(true, false);
+            
+            // Early
+            else if (_noteToHit.transform.position.y > _noteToHit.HitPos.y + 1)
+                Hit(false, true);
 
+            // Late/Missed
             else
-                Hit(false);
+                Hit(false, false);
         }
 
 
-        private void Hit(bool hit)
+        private void Hit(bool hit, bool early)
         {
             if (hit)
             {
                 GuiManager.Instance.P1Weight += _noteToHit.Points;
-                _noteToHit.TriggerFloatingText("Nice!");
+                _noteToHit.TriggerFloatingText(_hitFeedback[Random.Range(0, _hitFeedback.Length)]);
             }
-            else if (!hit)
+            else if (early)
+            {
+                GuiManager.Instance.P1Weight -= _noteToHit.Points / 2;
+                _noteToHit.TriggerFloatingText("Too early!");
+            }
+            else
             {
                 GuiManager.Instance.P1Weight -= _noteToHit.Points / 2;
                 _noteToHit.TriggerFloatingText("Missed!");

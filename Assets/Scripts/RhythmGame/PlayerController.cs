@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace RhythmGame
 {
@@ -7,6 +6,7 @@ namespace RhythmGame
     {
         [SerializeField] private MusicNote _notePrefab;
         [SerializeField] protected GameObject _hitPoint;
+        [SerializeField] protected string[] _hitFeedback = {"Nice!"};
 
         protected MusicNote _noteToHit;
 

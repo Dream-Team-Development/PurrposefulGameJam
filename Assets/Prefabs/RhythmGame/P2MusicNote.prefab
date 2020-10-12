@@ -105,6 +105,6 @@ MonoBehaviour:
   _points: 10
   _spawnPos: {x: 10, y: 5}
   _hitPos: {x: 10, y: -4}
-  _despawnPos: {x: 10, y: -7}
+  _despawnPos: {x: 10, y: -8}
   _floatingTextPrefab: {fileID: 1586025688741661907, guid: bdffe7a2579266f4f86b68457cfa6ba6, type: 3}
   _floatingTextSpawn: {x: 9, y: -3}

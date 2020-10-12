@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 0823a80c8d378a140abeac5021266673
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - a Arbei Berry
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 837769a5d5782754c82377eebfadbce6, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

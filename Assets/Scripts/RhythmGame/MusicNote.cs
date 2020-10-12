@@ -1,6 +1,4 @@
-﻿using System;
-using UnityEditor;
-using UnityEngine;
+﻿using UnityEngine;
 using Random = UnityEngine.Random;
 
 namespace RhythmGame
@@ -29,13 +27,8 @@ namespace RhythmGame
         
         public int Points => _points;
         public Vector2 SpawnPos => _spawnPos;
-
-        public Vector2 HitPos
-        {
-            get => _hitPos;
-            set => _hitPos = value;
-        }
-        
+        public Vector2 DespawnPos => _despawnPos;
+        public Vector2 HitPos { get; set; }
         public Direction ThisDirection => _thisDirection;
 
 
@@ -82,14 +75,6 @@ namespace RhythmGame
                 _despawnPos,
                 (_songManager.BeatsShownInAdvance - (_songManager.Notes[_songManager.NextIndex - 1] - _songManager.SongPosInBeats)) / _songManager.BeatsShownInAdvance
             );
-
-            if (transform.position.y >= _despawnPos.y && transform.position.y <= _hitPos.y - 2)
-            {
-                if(_thisPlayer == Player.One) GuiManager.Instance.P1Weight -= _points;
-                else GuiManager.Instance.P2Weight -= _points;
-                
-                Destroy(gameObject);
-            }
 
         }
 
