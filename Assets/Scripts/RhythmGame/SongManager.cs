@@ -11,6 +11,7 @@ namespace RhythmGame
         [SerializeField] private float _bpm;
         [SerializeField] private int _beatsShownInAdvance = 3;
         [SerializeField] private float[] _notes;
+        [SerializeField] private PlayerController[] _players;
 
         private int _nextIndex;
         // Current position of song (in seconds)
@@ -58,9 +59,10 @@ namespace RhythmGame
             {
                 if (_notePrefabs.Length != 0)
                 {
-                    // 0 == Player 1, 1 == Player 2
-                    Instantiate(_notePrefabs[0], _notePrefabs[0].SpawnPos, Quaternion.identity);
-                    Instantiate(_notePrefabs[1], _notePrefabs[1].SpawnPos, Quaternion.identity);
+                    foreach (PlayerController player in _players)
+                    {
+                        player.ProduceNote();
+                    }
                 }
                 
                 _nextIndex++;

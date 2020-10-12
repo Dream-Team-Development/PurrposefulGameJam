@@ -9,7 +9,7 @@ namespace RhythmGame
     public class MusicNote : MonoBehaviour
     {
         private enum Player { One, Two }
-        private enum Direction { Down, Left, Right, Up }
+        public enum Direction { Down, Left, Right, Up }
         
         [SerializeField] private SpriteRenderer _spriteRenderer;
         [SerializeField] private Sprite[] _noteSprites;
@@ -20,14 +20,23 @@ namespace RhythmGame
         [SerializeField] private Vector2 _hitPos = new Vector2(0, 5);
         [SerializeField] private Vector2 _despawnPos = new Vector2(0, -5);
 
-        [SerializeField] private GameObject _floatingTextPrefab;
+        [SerializeField] private FloatingScript _floatingTextPrefab;
         [SerializeField] private Vector2 _floatingTextSpawn = new Vector2(0, 5);
 
         private SongManager _songManager;
         private Direction _thisDirection;
-
+        private KeyCode _keyToHit;
+        
+        public int Points => _points;
         public Vector2 SpawnPos => _spawnPos;
-        public GameObject HitPos { get; set; }
+
+        public Vector2 HitPos
+        {
+            get => _hitPos;
+            set => _hitPos = value;
+        }
+        
+        public Direction ThisDirection => _thisDirection;
 
 
         private void Start()
@@ -39,6 +48,7 @@ namespace RhythmGame
                 case 1:
                     _spriteRenderer.sprite = _noteSprites[0];
                     _thisDirection = Direction.Down;
+                    
                     break;
                 
                 case 2:
@@ -66,28 +76,6 @@ namespace RhythmGame
             // Stop moving notes if music is not playing
             if(!_songManager.Audio.isPlaying) return;
 
-            switch (_thisDirection)
-            {
-                case Direction.Down:
-                    CheckHit(_thisPlayer == Player.One ? KeyCode.S : KeyCode.DownArrow);
-                    break;
-                
-                case Direction.Left:
-                    CheckHit(_thisPlayer == Player.One ? KeyCode.A : KeyCode.LeftArrow);
-                    break;
-                
-                case Direction.Right:
-                    CheckHit(_thisPlayer == Player.One ? KeyCode.D : KeyCode.RightArrow);
-                    break;
-                
-                case Direction.Up:
-                    CheckHit(_thisPlayer == Player.One ? KeyCode.W : KeyCode.UpArrow);
-                    break;
-
-                default:
-                    throw new ArgumentOutOfRangeException();
-            }
-
             // Move note in time to song
             transform.position = Vector2.Lerp(
                 _spawnPos,
@@ -97,77 +85,19 @@ namespace RhythmGame
 
             if (transform.position.y >= _despawnPos.y && transform.position.y <= _hitPos.y - 2)
             {
-                GuiManager.Instance.P1Weight -= _points;
+                if(_thisPlayer == Player.One) GuiManager.Instance.P1Weight -= _points;
+                else GuiManager.Instance.P2Weight -= _points;
+                
                 Destroy(gameObject);
             }
 
         }
 
 
-        private void CheckHit(KeyCode keyToHit)
+        public void TriggerFloatingText(string message)
         {
-            foreach(KeyCode keyCode in Enum.GetValues(typeof(KeyCode)))
-            {
-                if (!Input.GetKeyDown(keyCode)) continue;
-                
-                if (keyCode != keyToHit)
-                    Hit(false);
-                    
-                else if (keyCode == keyToHit)
-                {
-                    if (transform.position.y <= _hitPos.y + 1 && transform.position.y >= _hitPos.y - 1)
-                        Hit(true);
-                    
-                    else
-                        Hit(false);
-                }
-            }
-        }
-
-
-        private void Hit(bool hit)
-        {
-            if (hit)
-            {
-                switch (_thisPlayer)
-                {
-                    case Player.One:
-                        GuiManager.Instance.P1Weight += _points;
-                        TriggerFloatingText("Nice!");
-                        break;
-                    case Player.Two:
-                        GuiManager.Instance.P2Weight += _points;
-                        TriggerFloatingText("Nice!");
-                        break;
-                    default:
-                        throw new ArgumentOutOfRangeException();
-                }
-            }
-            else if (!hit)
-            {
-                switch (_thisPlayer)
-                {
-                    case Player.One:
-                        GuiManager.Instance.P1Weight -= _points / 2;
-                        TriggerFloatingText("Missed!");
-                        break;
-                    case Player.Two:
-                        GuiManager.Instance.P2Weight -= _points / 2;
-                        TriggerFloatingText("Missed!");
-                        break;
-                    default:
-                        throw new ArgumentOutOfRangeException();
-                }
-            }
-            
-            Destroy(gameObject);
-        }
-
-
-        void TriggerFloatingText(string message)
-        {
-            GameObject newFloatingText = Instantiate(_floatingTextPrefab, _floatingTextSpawn, Quaternion.identity);
-            newFloatingText.GetComponent<TextMesh>().text = message;
+            FloatingScript newFloatingText = Instantiate(_floatingTextPrefab, _floatingTextSpawn, Quaternion.identity);
+            newFloatingText.SetString(message);
         }
     }
 }

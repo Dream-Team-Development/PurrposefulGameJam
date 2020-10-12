@@ -5,12 +5,16 @@ namespace RhythmGame
 {
     public class PlayerController : MonoBehaviour
     {
-        [SerializeField] private MusicNote _musicNote;
-        [SerializeField] private GameObject _hitPoint;
+        [SerializeField] private MusicNote _notePrefab;
+        [SerializeField] protected GameObject _hitPoint;
 
-        private void Start()
+        protected MusicNote _noteToHit;
+
+        
+        public void ProduceNote()
         {
-            _musicNote.HitPos = _hitPoint;
+            _noteToHit = Instantiate(_notePrefab, _notePrefab.SpawnPos, Quaternion.identity);
+            _noteToHit.HitPos = new Vector2(_hitPoint.transform.position.x, _hitPoint.transform.position.y);
         }
     }
 }

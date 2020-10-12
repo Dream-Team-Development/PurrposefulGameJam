@@ -111,6 +111,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _destroyTime: 1
   _randomisePos: {x: 0.5, y: 1, z: 0}
+  _textMesh: {fileID: 1828308319637451406}
 --- !u!95 &3106720515902536702
 Animator:
   serializedVersion: 3

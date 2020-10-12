@@ -19,7 +19,7 @@ namespace RhythmGame
             set
             {
                 _p1Weight = value;
-                _p1WeightText.text = "Points: " + _p1Weight;
+                _p1WeightText.text = "Weight: " + _p1Weight;
             }
         }
 
@@ -29,7 +29,7 @@ namespace RhythmGame
             set
             {
                 _p2Weight = value;
-                _p2WeightText.text = "Points: " + _p2Weight;
+                _p2WeightText.text = "Weight: " + _p2Weight;
             }
         }
 

@@ -715,10 +715,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1040756214}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b75f6f26ad86fa54ebe5add53093364c, type: 3}
+  m_Script: {fileID: 11500000, guid: a5f3a22a7447bc640950ba2c80346c96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _musicNote: {fileID: 5588424565085806711, guid: 7fbb2691a5592a64bafbbc1830b6c487, type: 3}
+  _notePrefab: {fileID: 5588424565085806711, guid: 7fbb2691a5592a64bafbbc1830b6c487, type: 3}
   _hitPoint: {fileID: 1934461354}
 --- !u!4 &1040756216
 Transform:
@@ -1280,10 +1280,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1674276796}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b75f6f26ad86fa54ebe5add53093364c, type: 3}
+  m_Script: {fileID: 11500000, guid: 48017578ea2fa754abb6a54dd6d72f8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _musicNote: {fileID: 5588424565085806711, guid: d6b3baaa74d06594e8162b0a3c034bc5, type: 3}
+  _notePrefab: {fileID: 5588424565085806711, guid: d6b3baaa74d06594e8162b0a3c034bc5, type: 3}
   _hitPoint: {fileID: 1226496665}
 --- !u!4 &1674276798
 Transform:
@@ -1560,6 +1560,9 @@ MonoBehaviour:
   - 14
   - 15
   - 16
+  _players:
+  - {fileID: 1040756215}
+  - {fileID: 1674276797}
 --- !u!4 &2040458864
 Transform:
   m_ObjectHideFlags: 0
