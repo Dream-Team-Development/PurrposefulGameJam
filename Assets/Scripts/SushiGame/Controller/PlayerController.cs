@@ -2,6 +2,7 @@
 
 namespace SushiGame.Controller
 {
+    [RequireComponent(typeof(Rigidbody2D), typeof(Collider2D))]
     public class PlayerController : MonoBehaviour
     {
         [Header("Dependencies")]
@@ -11,6 +12,7 @@ namespace SushiGame.Controller
         [SerializeField] private float _startWeight;
         [SerializeField] private float _startEnergy;
         [SerializeField] private float _sicknessLevel;
+        [SerializeField] private Rigidbody2D _rb;
         private float _xMov;
         private float _yMov;
 
@@ -36,44 +38,8 @@ namespace SushiGame.Controller
         {
             _xMov = Input.GetAxis("Horizontal");
             _yMov = Input.GetAxis("Vertical");
-            var nextPos = transform.position + new Vector3(_xMov, _yMov, 0).normalized * (_speed * Time.deltaTime);
 
-            if (Vector3.Distance(_centre.position, nextPos) > _maxDistance) return;
-        
-            transform.position += new Vector3(_xMov, _yMov, 0).normalized * (_speed * Time.deltaTime);
+            _rb.velocity += new Vector2(_xMov, _yMov).normalized * _speed;
         }
-
-        [Header("Debug Circle")]
-        [SerializeField] private int _segments = 32;
-        [SerializeField] private Color _color = Color.blue;
-
-#if UNITY_EDITOR
-        private void OnDrawGizmos()
-        {
-            DrawEllipse(_centre.position, _centre.forward, _centre.up, _maxDistance, _maxDistance, _segments, _color);
-        }
- 
-        private static void DrawEllipse(Vector3 pos, Vector3 forward, Vector3 up, float radiusX, float radiusY, int segments, Color color, float duration = 0)
-        {
-            float angle = 0f;
-            Quaternion rot = Quaternion.LookRotation(forward, up);
-            Vector3 lastPoint = Vector3.zero;
-            Vector3 thisPoint = Vector3.zero;
- 
-            for (int i = 0; i < segments + 1; i++)
-            {
-                thisPoint.x = Mathf.Sin(Mathf.Deg2Rad * angle) * radiusX;
-                thisPoint.y = Mathf.Cos(Mathf.Deg2Rad * angle) * radiusY;
- 
-                if (i > 0)
-                {
-                    Debug.DrawLine(rot * lastPoint + pos, rot * thisPoint + pos, color, duration);
-                }
- 
-                lastPoint = thisPoint;
-                angle += 360f / segments;
-            }
-        }
-#endif
     }
 }
