@@ -1,4 +1,5 @@
 ﻿using System;
+using UnityEditor;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -19,10 +20,14 @@ namespace RhythmGame
         [SerializeField] private Vector2 _hitPos = new Vector2(0, 5);
         [SerializeField] private Vector2 _despawnPos = new Vector2(0, -5);
 
+        [SerializeField] private GameObject _floatingTextPrefab;
+        [SerializeField] private Vector2 _floatingTextSpawn = new Vector2(0, 5);
+
         private SongManager _songManager;
         private Direction _thisDirection;
 
         public Vector2 SpawnPos => _spawnPos;
+        public GameObject HitPos { get; set; }
 
 
         private void Start()
@@ -90,9 +95,9 @@ namespace RhythmGame
                 (_songManager.BeatsShownInAdvance - (_songManager.Notes[_songManager.NextIndex - 1] - _songManager.SongPosInBeats)) / _songManager.BeatsShownInAdvance
             );
 
-            if (transform.position.y <= _despawnPos.y)
+            if (transform.position.y >= _despawnPos.y && transform.position.y <= _hitPos.y - 2)
             {
-                PointsManager.Instance.P1Points -= _points;
+                GuiManager.Instance.P1Weight -= _points;
                 Destroy(gameObject);
             }
 
@@ -127,10 +132,12 @@ namespace RhythmGame
                 switch (_thisPlayer)
                 {
                     case Player.One:
-                        PointsManager.Instance.P1Points += _points;
+                        GuiManager.Instance.P1Weight += _points;
+                        TriggerFloatingText("Nice!");
                         break;
                     case Player.Two:
-                        PointsManager.Instance.P2Points += _points;
+                        GuiManager.Instance.P2Weight += _points;
+                        TriggerFloatingText("Nice!");
                         break;
                     default:
                         throw new ArgumentOutOfRangeException();
@@ -141,10 +148,12 @@ namespace RhythmGame
                 switch (_thisPlayer)
                 {
                     case Player.One:
-                        PointsManager.Instance.P1Points -= _points / 2;
+                        GuiManager.Instance.P1Weight -= _points / 2;
+                        TriggerFloatingText("Missed!");
                         break;
                     case Player.Two:
-                        PointsManager.Instance.P2Points -= _points / 2;
+                        GuiManager.Instance.P2Weight -= _points / 2;
+                        TriggerFloatingText("Missed!");
                         break;
                     default:
                         throw new ArgumentOutOfRangeException();
@@ -152,6 +161,13 @@ namespace RhythmGame
             }
             
             Destroy(gameObject);
+        }
+
+
+        void TriggerFloatingText(string message)
+        {
+            GameObject newFloatingText = Instantiate(_floatingTextPrefab, _floatingTextSpawn, Quaternion.identity);
+            newFloatingText.GetComponent<TextMesh>().text = message;
         }
     }
 }
