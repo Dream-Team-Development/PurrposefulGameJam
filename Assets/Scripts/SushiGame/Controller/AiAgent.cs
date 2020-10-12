@@ -5,6 +5,7 @@ namespace SushiGame.Controller
 {
     public class AiAgent : MonoBehaviour
     {
+        [Header("Ai Behaviour")]
         [SerializeField] private float _speed;
         [SerializeField] private AiController _aiController;
         

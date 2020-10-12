@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using SushiGame.FoodStuff;
+using UnityEngine;
 
 namespace SushiGame.Controller
 {
@@ -13,6 +14,11 @@ namespace SushiGame.Controller
         [SerializeField] private float _startEnergy;
         [SerializeField] private float _sicknessLevel;
         [SerializeField] private Rigidbody2D _rb;
+        
+        [Header("Interact")]
+        [SerializeField] private KeyCode _interactKey;
+        [SerializeField] private float _radius;
+        
         private float _xMov;
         private float _yMov;
 
@@ -36,6 +42,13 @@ namespace SushiGame.Controller
 
         private void Update()
         {
+            if (Input.GetKeyDown(_interactKey))
+            {
+                var hits = Physics2D.OverlapCircle(transform.position, _radius, -8);
+                var interact = hits.GetComponent<IInteract>();
+                interact?.Interact(this);
+            }
+            
             _xMov = Input.GetAxis("Horizontal");
             _yMov = Input.GetAxis("Vertical");
 
