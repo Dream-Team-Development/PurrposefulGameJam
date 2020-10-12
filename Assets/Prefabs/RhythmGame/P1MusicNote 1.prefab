@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2588657955619293473}
   - component: {fileID: 5588424565085806711}
   m_Layer: 0
-  m_Name: P1MusicNote
+  m_Name: P1MusicNote 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -106,3 +106,5 @@ MonoBehaviour:
   _spawnPos: {x: -10, y: 5}
   _hitPos: {x: -10, y: -4}
   _despawnPos: {x: -10, y: -7}
+  _floatingTextPrefab: {fileID: 6670423564917838926, guid: bdffe7a2579266f4f86b68457cfa6ba6, type: 3}
+  _floatingTextSpawn: {x: -9, y: -3}
