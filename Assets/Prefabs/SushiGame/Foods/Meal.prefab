@@ -112,9 +112,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68cb2f23bbc2d7f4b8025889050e8ce5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 0
+  _speed: 5
   _aiController: {fileID: 0}
   _startPos: 0
   _nextPos: 0
   _weightGain: 10
   _energyGain: 15
+  _sicknessGain: 0

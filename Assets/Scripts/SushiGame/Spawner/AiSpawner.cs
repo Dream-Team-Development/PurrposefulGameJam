@@ -5,14 +5,13 @@ namespace SushiGame.Spawner
 {
     public class AiSpawner : MonoBehaviour
     {
-      [Header("Spawn Timer")]
+        [Header("Spawn Timer")]
         [SerializeField] private float __spawnRate;
         [SerializeField] private float _timerReduction;
         [SerializeField] private float _elapsedTimeToReduce;
         [Header("Dependencies")]
-        [SerializeField] private GameObject[] _aiPrefab;
-        [SerializeField] private int[] _spawnWeight;
-        [SerializeField] private AiController _aiController;
+        [SerializeField, Tooltip("Order matches spawn weight below")] private GameObject[] _aiPrefab;
+        [SerializeField, Tooltip("Descending chance from 100 to 0")] private int[] _spawnWeight;
         private float _spawnTimer;
         private float _timeElapsed;
         private float _previousTime = 0f;
