@@ -15,4 +15,4 @@ MonoBehaviour:
   catName: Turkish Angora
   profileImage: {fileID: -3529854312254555942, guid: 908503973f7c98145bea173fc16e433b, type: 3}
   idealWeight: 4
-  sex: Male
+  sexImage: {fileID: 9120299909250688550, guid: b89cd3f98d48afb4abe47fe224da6fa4, type: 3}

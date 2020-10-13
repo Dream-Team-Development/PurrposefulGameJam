@@ -15,4 +15,4 @@ MonoBehaviour:
   catName: Japanese Bobtail
   profileImage: {fileID: -7286548500120324848, guid: 908503973f7c98145bea173fc16e433b, type: 3}
   idealWeight: 3
-  sex: Female
+  sexImage: {fileID: -3344345146683644454, guid: b89cd3f98d48afb4abe47fe224da6fa4, type: 3}

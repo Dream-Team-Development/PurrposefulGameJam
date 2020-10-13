@@ -15,4 +15,4 @@ MonoBehaviour:
   catName: Ragdoll
   profileImage: {fileID: 21300000, guid: 76a9233301ecda24ab696d38faa83118, type: 3}
   idealWeight: 8
-  sex: Male
+  sexImage: {fileID: 9120299909250688550, guid: b89cd3f98d48afb4abe47fe224da6fa4, type: 3}

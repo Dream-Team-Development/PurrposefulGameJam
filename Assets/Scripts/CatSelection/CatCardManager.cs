@@ -5,7 +5,7 @@ namespace CatSelection
 {
     public class CatCardManager : MonoBehaviour
     {
-        public Image CatPic;
-        public Text CatBreedText, CatWeightText, CatSexText;
+        public Image CatImage, CatSexImage;
+        public Text CatBreedText, CatWeightText;
     }
 }

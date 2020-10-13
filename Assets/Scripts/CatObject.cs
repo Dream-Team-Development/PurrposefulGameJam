@@ -8,5 +8,5 @@ public class CatObject : ScriptableObject
     public string catName;
     public Sprite profileImage;
     public int idealWeight;
-    public string sex;
+    public Sprite sexImage;
 }

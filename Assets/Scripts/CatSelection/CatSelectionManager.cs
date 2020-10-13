@@ -82,17 +82,17 @@ namespace CatSelection
             switch (player)
             {
                 case 1:
-                    _p1CatCard.CatPic.sprite = _p1Options[_p1Index].profileImage;
+                    _p1CatCard.CatImage.sprite = _p1Options[_p1Index].profileImage;
                     _p1CatCard.CatBreedText.text = "Breed: " + _p1Options[_p1Index].catName;
                     _p1CatCard.CatWeightText.text = "Goal Weight: " + _p1Options[_p1Index].idealWeight;
-                    _p1CatCard.CatSexText.text = "Sex: " + _p1Options[_p1Index].sex;
+                    _p1CatCard.CatSexImage.sprite = _p1Options[_p1Index].sexImage;
                     break;
                 
                 case 2:
-                    _p2CatCard.CatPic.sprite = _p2Options[_p2Index].profileImage;
+                    _p2CatCard.CatImage.sprite = _p2Options[_p2Index].profileImage;
                     _p2CatCard.CatBreedText.text = "Breed: " + _p2Options[_p2Index].catName;
                     _p2CatCard.CatWeightText.text = "Goal Weight: " + _p2Options[_p2Index].idealWeight;
-                    _p2CatCard.CatSexText.text = "Sex: " + _p2Options[_p2Index].sex;
+                    _p2CatCard.CatSexImage.sprite = _p2Options[_p2Index].sexImage;
                     break;
             }
         }
