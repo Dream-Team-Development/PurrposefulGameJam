@@ -1,5 +1,7 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace SushiGame.Controller
 {
@@ -8,6 +10,7 @@ namespace SushiGame.Controller
         [Header("Ai Behaviour")]
         [SerializeField] private float _speed;
         [SerializeField] private AiController _aiController;
+        [SerializeField] private float _radius;
         
         private Color[] _colors = {Color.blue, Color.cyan, Color.green, Color.magenta, Color.red, Color.yellow};
         
@@ -20,10 +23,20 @@ namespace SushiGame.Controller
             set => _aiController = value;
         }
 
+        private void OnDrawGizmos()
+        {
+            Gizmos.DrawWireSphere(transform.position, _radius);
+        }
+
         private void Awake()
         {
             _aiController = FindObjectOfType<AiController>();
             _startPos = Random.Range(0, _aiController.Positions.Length);
+            while (Physics2D.OverlapCircle(_aiController.Positions[_startPos], _radius, -8))
+            {
+                _startPos = Random.Range(0, _aiController.Positions.Length);
+            }
+
             transform.position = _aiController.Positions[_startPos];
         }
 

@@ -98,6 +98,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 5
   _aiController: {fileID: 0}
+  _radius: 2
   _startPos: 0
   _nextPos: 0
   _weightGain: 10

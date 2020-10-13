@@ -90,7 +90,7 @@ namespace SushiGame.Controller
             _rb.velocity += new Vector2(_xMov, _yMov).normalized * _speed;
             _rb.velocity = Vector2.ClampMagnitude(_rb.velocity, _speed);
             
-            if (Input.GetKeyDown(_interactKey) && !_isSick)
+            if (Input.GetKey(_interactKey) && !_isSick)
             {
                 var hits = Physics2D.OverlapCircle(transform.position, _radius, -8);
                 if (!hits) return;
