@@ -723,7 +723,7 @@ MonoBehaviour:
   _hitPoint: {fileID: 1934461354}
   _hitFeedback:
   - Nice!
-  - Awesome!
+  - Pawsome!
   - Good job!
 --- !u!4 &1040756216
 Transform:
@@ -1344,7 +1344,7 @@ MonoBehaviour:
   _hitPoint: {fileID: 1226496665}
   _hitFeedback:
   - Nice!
-  - Awesome!
+  - Pawsome!
   - Good job!
 --- !u!4 &1674276798
 Transform:
