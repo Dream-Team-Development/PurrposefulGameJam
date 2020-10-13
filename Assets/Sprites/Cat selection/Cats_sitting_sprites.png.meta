@@ -1,34 +1,28 @@
 fileFormatVersion: 2
-guid: 1d0f3c2a5afff424c8ca008b43f0777b
+guid: 908503973f7c98145bea173fc16e433b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8894201953851282084
-    second: Buttons_Pawesome
+      213: -2810060563282582015
+    second: Siamese
   - first:
-      213: 7664807735657788756
-    second: Buttons_OK
+      213: -1563535666790407288
+    second: ragdoll
   - first:
-      213: -5402412272178277761
-    second: Buttons_Return
+      213: -3529854312254555942
+    second: Angora
   - first:
-      213: 2013261503205373015
-    second: Buttons_Next
+      213: 3016278703679996560
+    second: Cats_sitting_sprites_3
   - first:
-      213: 3760674464881954987
-    second: Buttons_Start
+      213: 6220057464027276723
+    second: mixbreed
   - first:
-      213: -7811504096720598664
-    second: Buttons_Quit
+      213: -7286548500120324848
+    second: bobtail
   - first:
-      213: -7814535901586335685
-    second: Buttons_Arrow
-  - first:
-      213: -3243065930256096816
-    second: Buttons_Plau
-  - first:
-      213: -5316896731886317114
-    second: Buttons_Select
+      213: 3161551838633141779
+    second: britishshort
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -128,190 +122,148 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Buttons_Pawesome
+      name: Siamese
       rect:
         serializedVersion: 2
-        x: 104
-        y: 789
-        width: 804
-        height: 298
+        x: 422
+        y: 3258
+        width: 940
+        height: 1932
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4a214e3bd8d8e6b70800000000000000
-      internalID: 8894201953851282084
+      spriteID: 10625385ec8a009d0800000000000000
+      internalID: -2810060563282582015
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buttons_OK
+      name: ragdoll
       rect:
         serializedVersion: 2
-        x: 1037
-        y: 789
-        width: 320
-        height: 299
+        x: 2358
+        y: 3120
+        width: 1660
+        height: 2272
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4557c83960ede5a60800000000000000
-      internalID: 7664807735657788756
+      spriteID: 883ed4358943d4ae0800000000000000
+      internalID: -1563535666790407288
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buttons_Return
+      name: Angora
       rect:
         serializedVersion: 2
-        x: 1477
-        y: 789
-        width: 589
-        height: 298
+        x: 4652
+        y: 3094
+        width: 1455
+        height: 2260
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f725a9269a6c605b0800000000000000
-      internalID: -5402412272178277761
+      spriteID: ad8bf297430730fc0800000000000000
+      internalID: -3529854312254555942
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buttons_Next
+      name: Cats_sitting_sprites_3
       rect:
         serializedVersion: 2
-        x: 207
-        y: 381
-        width: 589
-        height: 298
+        x: 3941
+        y: 3056
+        width: 20
+        height: 6
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7547682abaa80fb10800000000000000
-      internalID: 2013261503205373015
+      spriteID: 0920c640089fbd920800000000000000
+      internalID: 3016278703679996560
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buttons_Start
+      name: mixbreed
       rect:
         serializedVersion: 2
-        x: 951
-        y: 381
-        width: 588
-        height: 298
+        x: 435
+        y: 573
+        width: 1261
+        height: 1936
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ba0db2b3089903430800000000000000
-      internalID: 3760674464881954987
+      spriteID: 3b5ecd9ee45125650800000000000000
+      internalID: 6220057464027276723
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buttons_Quit
+      name: bobtail
       rect:
         serializedVersion: 2
-        x: 1658
-        y: 386
-        width: 588
-        height: 297
+        x: 2643
+        y: 538
+        width: 1087
+        height: 1968
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 879c5714966f79390800000000000000
-      internalID: -7811504096720598664
+      spriteID: 0153ca3bebaf0ea90800000000000000
+      internalID: -7286548500120324848
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buttons_Arrow
+      name: britishshort
       rect:
         serializedVersion: 2
-        x: 245
-        y: 41
-        width: 322
-        height: 299
+        x: 4760
+        y: 419
+        width: 1235
+        height: 2240
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b38d86d20013d8390800000000000000
-      internalID: -7814535901586335685
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Buttons_Plau
-      rect:
-        serializedVersion: 2
-        x: 958
-        y: 41
-        width: 588
-        height: 298
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0d1e9eb08b05ef2d0800000000000000
-      internalID: -3243065930256096816
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Buttons_Select
-      rect:
-        serializedVersion: 2
-        x: 1666
-        y: 41
-        width: 701
-        height: 298
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6c11b7ca7969636b0800000000000000
-      internalID: -5316896731886317114
+      spriteID: 31626b885a610eb20800000000000000
+      internalID: 3161551838633141779
       vertices: []
       indices: 
       edges: []
@@ -319,7 +271,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 8e7b03c5430723544ac073939dde1638
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
