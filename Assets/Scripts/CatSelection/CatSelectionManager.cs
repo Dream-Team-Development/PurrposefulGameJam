@@ -9,6 +9,7 @@ namespace CatSelection
         
         [SerializeField] private CatObject[] _catOptions;
         [SerializeField] private Button _playButton;
+        [SerializeField] private CatCardManager _p1CatCard, _p2CatCard;
 
         private CatObject[] _p1Options, _p2Options;
         private int _p1Index, _p2Index;
@@ -24,6 +25,9 @@ namespace CatSelection
 
             _p1Options = _catOptions; _p1Index = 0;
             _p2Options = _catOptions; _p2Index = 0;
+            
+            UpdateCatCard(1);
+            UpdateCatCard(2);
         }
 
 
@@ -40,13 +44,13 @@ namespace CatSelection
                 case 1:
                     if (_p1Index+1 == _p1Options.Length) _p1Index = 0;
                     else _p1Index++;
-                    Debug.Log("P1: " + _p1Index);
+                    UpdateCatCard(1);
                     break;
                 
                 case 2:
                     if (_p2Index+1 == _p2Options.Length) _p2Index = 0;
                     else _p2Index++;
-                    Debug.Log("P2: " + _p2Index);
+                    UpdateCatCard(2);
                     break;
             }
         }
@@ -59,13 +63,36 @@ namespace CatSelection
                 case 1:
                     if (_p1Index-1 == -1) _p1Index = _p1Options.Length - 1;
                     else _p1Index--;
-                    Debug.Log("P1: " + _p1Index);
+                    UpdateCatCard(1);
                     break;
                 
                 case 2:
                     if (_p2Index-1 == -1) _p2Index = _p2Options.Length - 1;
                     else _p2Index--;
-                    Debug.Log("P2: " + _p2Index);
+                    UpdateCatCard(2);
+                    break;
+            }
+        }
+
+
+        private void UpdateCatCard(int player)
+        {
+            if (!_p1CatCard || !_p2CatCard) return;
+            
+            switch (player)
+            {
+                case 1:
+                    _p1CatCard.CatPic.sprite = _p1Options[_p1Index].profileImage;
+                    _p1CatCard.CatBreedText.text = "Breed: " + _p1Options[_p1Index].catName;
+                    _p1CatCard.CatWeightText.text = "Goal Weight: " + _p1Options[_p1Index].idealWeight;
+                    _p1CatCard.CatSexText.text = "Sex: " + _p1Options[_p1Index].sex;
+                    break;
+                
+                case 2:
+                    _p2CatCard.CatPic.sprite = _p2Options[_p2Index].profileImage;
+                    _p2CatCard.CatBreedText.text = "Breed: " + _p2Options[_p2Index].catName;
+                    _p2CatCard.CatWeightText.text = "Goal Weight: " + _p2Options[_p2Index].idealWeight;
+                    _p2CatCard.CatSexText.text = "Sex: " + _p2Options[_p2Index].sex;
                     break;
             }
         }
