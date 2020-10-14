@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2588657955619293473}
   - component: {fileID: 5588424565085806711}
   m_Layer: 0
-  m_Name: P2MusicNote
+  m_Name: MusicNote
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -103,7 +103,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: edfe867ca3200694da6e219a33c390df, type: 3}
   _points: 10
   _spawnHitGap: 10
-  _spawnDespawnGap: 2
+  _spawnDespawnGap: 3
   _floatingTextPrefab: {fileID: 1586025688741661907, guid: bdffe7a2579266f4f86b68457cfa6ba6, type: 3}
-  _floatingTextOffsetX: 0
-  _floatingTextOffsetY: 0
+  _floatingTextOffsetX: -2
+  _floatingTextOffsetY: 2

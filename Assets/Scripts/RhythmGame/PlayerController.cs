@@ -10,11 +10,18 @@ namespace RhythmGame
 
         protected MusicNote _noteToHit;
 
-        
+        private void Start()
+        {
+            _notePrefab.HitPos = _hitPoint.transform.position;
+        }
+
+
         public void ProduceNote()
         {
             _noteToHit = Instantiate(_notePrefab, _notePrefab.SpawnPos, Quaternion.identity);
-            _noteToHit.HitPos = new Vector2(_hitPoint.transform.position.x, _hitPoint.transform.position.y);
+            var position = _hitPoint.transform.position;
+            
+            _noteToHit.HitPos = new Vector2(position.x, position.y);
         }
     }
 }

@@ -158,6 +158,8 @@ namespace CatSelection
         public void LetTheGamesBegin()
         {
             Debug.Log("Let the games begin");
+            // Set player 1 and 2 cats from chosen cat index
+            // Load scene for sushi game
         }
     }
 }

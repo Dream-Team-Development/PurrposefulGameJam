@@ -101,10 +101,9 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0a69aaec1f4b12b44be38bddad21385c, type: 3}
   - {fileID: 21300000, guid: 00127b0bb3f882040b4d9be32b2d5340, type: 3}
   - {fileID: 21300000, guid: edfe867ca3200694da6e219a33c390df, type: 3}
-  _thisPlayer: 0
   _points: 10
-  _spawnPos: {x: -10, y: 5}
-  _hitPos: {x: -10, y: -4}
-  _despawnPos: {x: -10, y: -8}
+  _spawnHitGap: 10
+  _spawnDespawnGap: 3
   _floatingTextPrefab: {fileID: 1586025688741661907, guid: bdffe7a2579266f4f86b68457cfa6ba6, type: 3}
-  _floatingTextSpawn: {x: -9, y: -3}
+  _floatingTextOffsetX: 2
+  _floatingTextOffsetY: 2
