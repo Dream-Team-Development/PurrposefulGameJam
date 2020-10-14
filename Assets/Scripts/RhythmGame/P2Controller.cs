@@ -64,16 +64,19 @@ namespace RhythmGame
         {
             if (hit)
             {
+                UpdateStreak(true);
                 GuiManager.Instance.P2Weight += _noteToHit.Points;
                 _noteToHit.TriggerFloatingText(_hitFeedback[Random.Range(0, _hitFeedback.Length)]);
             }
             else if (early)
             {
+                UpdateStreak(false);
                 GuiManager.Instance.P1Weight -= _noteToHit.Points / 2;
                 _noteToHit.TriggerFloatingText("Too early!");
             }
             else
             {
+                UpdateStreak(false);
                 GuiManager.Instance.P2Weight -= _noteToHit.Points / 2;
                 _noteToHit.TriggerFloatingText("Missed!");
             }
