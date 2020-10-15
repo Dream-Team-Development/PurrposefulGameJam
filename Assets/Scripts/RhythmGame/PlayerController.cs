@@ -40,10 +40,10 @@ namespace RhythmGame
 
         protected void UpdateStreak(bool hit)
         {
-            if (hit) _danceIndex++;
-            else _danceIndex = 0;
-
-            if (_danceIndex > _totalDanceAnimations) _danceIndex = 1;
+            if (!hit) return;
+            
+            _danceIndex++;
+            if (_danceIndex > _totalDanceAnimations) _danceIndex = 0;
             
             _catAnimator.SetInteger(_animatorParameterName, _danceIndex);
         }

@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Siamese_Dance03
+  m_Name: BritishShortHair_Dance03
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,11 +20,13 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 473254617446724819, guid: e1437694184da1c409ddb80930d2ec5c, type: 3}
-    - time: 0.21666667
-      value: {fileID: 4177699833012036629, guid: e1437694184da1c409ddb80930d2ec5c, type: 3}
+      value: {fileID: -430524086967695796, guid: c8ff2f79d22435e40bcff6af068cf36e, type: 3}
+    - time: 0.13333334
+      value: {fileID: -7904044880281229137, guid: c8ff2f79d22435e40bcff6af068cf36e, type: 3}
+    - time: 0.28333333
+      value: {fileID: 7743644225311279233, guid: c8ff2f79d22435e40bcff6af068cf36e, type: 3}
     - time: 0.41666666
-      value: {fileID: 4506665972238067651, guid: e1437694184da1c409ddb80930d2ec5c, type: 3}
+      value: {fileID: -7904044880281229137, guid: c8ff2f79d22435e40bcff6af068cf36e, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -44,9 +46,10 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 473254617446724819, guid: e1437694184da1c409ddb80930d2ec5c, type: 3}
-    - {fileID: 4177699833012036629, guid: e1437694184da1c409ddb80930d2ec5c, type: 3}
-    - {fileID: 4506665972238067651, guid: e1437694184da1c409ddb80930d2ec5c, type: 3}
+    - {fileID: -430524086967695796, guid: c8ff2f79d22435e40bcff6af068cf36e, type: 3}
+    - {fileID: -7904044880281229137, guid: c8ff2f79d22435e40bcff6af068cf36e, type: 3}
+    - {fileID: 7743644225311279233, guid: c8ff2f79d22435e40bcff6af068cf36e, type: 3}
+    - {fileID: -7904044880281229137, guid: c8ff2f79d22435e40bcff6af068cf36e, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
