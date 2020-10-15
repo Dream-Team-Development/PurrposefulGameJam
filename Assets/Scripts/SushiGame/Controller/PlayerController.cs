@@ -16,6 +16,7 @@ namespace SushiGame.Controller
         [SerializeField] private float _sicknessLevel;
         [SerializeField] private Rigidbody2D _rb;
 
+        [Header("Player Input")]
         [SerializeField] private KeyCode _upKey;
         [SerializeField] private KeyCode _leftKey;
         [SerializeField] private KeyCode _downKey;
