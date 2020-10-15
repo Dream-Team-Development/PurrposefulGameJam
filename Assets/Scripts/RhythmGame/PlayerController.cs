@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 namespace RhythmGame
 {
@@ -6,20 +7,26 @@ namespace RhythmGame
     public class PlayerController : MonoBehaviour
     {
         [SerializeField] private MusicNote _notePrefab;
+        [SerializeField] private Slider _energyBarSlider;
+        [SerializeField] protected float _energyChange;
         [SerializeField] protected GameObject _hitPoint;
         [SerializeField] protected string[] _hitFeedback = {"Nice!"};
-        
+
         [Header("Animations")]
         [SerializeField] protected Animator _catAnimator;
         [SerializeField] private string _animatorParameterName;
         [SerializeField] private int _totalDanceAnimations;
         [SerializeField] private int _animationSwitchRate;
 
+        protected float weight, energy;
         protected MusicNote _noteToHit;
         protected int _danceIndex;
 
         private void Start()
         {
+            // TODO: Energy should be set from PlayerPrefs
+            energy = 100;
+            
             _notePrefab.HitPos = _hitPoint.transform.position;
 
             if (!_catAnimator) _catAnimator = GetComponent<Animator>();
@@ -35,6 +42,13 @@ namespace RhythmGame
             var position = _hitPoint.transform.position;
             
             _noteToHit.HitPos = new Vector2(position.x, position.y);
+        }
+
+
+        protected void UpdateEnergy(float energyReduction)
+        {
+            energy -= energyReduction;
+            _energyBarSlider.value = energy / 100;
         }
 
 
