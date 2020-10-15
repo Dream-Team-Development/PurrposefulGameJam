@@ -22,6 +22,10 @@ namespace SushiGame.Controller
         [SerializeField] private KeyCode _downKey;
         [SerializeField] private KeyCode _rightKey;
         
+        [Header("Animation")]
+        [SerializeField] private Animator _animator;
+        [SerializeField] private string _animatorParameter;
+        
         [Header("Interact")]
         [SerializeField] private KeyCode _interactKey;
         [SerializeField] private float _radius;
@@ -71,6 +75,8 @@ namespace SushiGame.Controller
             //If the cat gets sick this will block movement and create new movement
             if (_sicknessLevel > 0)
             {
+                _animator.SetInteger(_animatorParameter, 5);
+                
                 _sicknessLevel -= Time.deltaTime;
                 
                 var direction = Vector3.zero - transform.position;
@@ -90,7 +96,11 @@ namespace SushiGame.Controller
             }
             
             //Prevent sickness level going below zero
-            if (_sicknessLevel < 0) _sicknessLevel = 0;
+            if (_sicknessLevel < 0)
+            {
+                _sicknessLevel = 0;
+                _animator.SetInteger(_animatorParameter, 0);
+            }
             
             //Get vertical input
             if (Input.GetKey(_upKey)) _yMov = 1;
@@ -104,6 +114,12 @@ namespace SushiGame.Controller
             
             //Set velocity to zero if no input (stops sliding)
             if (_yMov == 0 && _xMov == 0) _rb.velocity = Vector2.zero;
+            
+            if (_yMov > 0) _animator.SetInteger(_animatorParameter, 1);
+            else if(_xMov > 0) _animator.SetInteger(_animatorParameter, 2);
+            else if (_yMov < 0) _animator.SetInteger(_animatorParameter, 3);
+            else if (_xMov < 0) _animator.SetInteger(_animatorParameter, 4);
+            else _animator.SetInteger(_animatorParameter, 0);
 
             _rb.velocity += new Vector2(_xMov, _yMov).normalized * _speed;
             _rb.velocity = Vector2.ClampMagnitude(_rb.velocity, _speed);
