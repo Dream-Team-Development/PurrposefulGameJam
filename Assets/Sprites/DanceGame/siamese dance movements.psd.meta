@@ -1,0 +1,700 @@
+fileFormatVersion: 2
+guid: e1437694184da1c409ddb80930d2ec5c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 9032897338701370391
+    second: walk_1
+  - first:
+      213: 8375096039076775600
+    second: walk_2
+  - first:
+      213: -2999767801546309661
+    second: walk_3
+  - first:
+      213: 8167040161398142927
+    second: walk_4
+  - first:
+      213: -8415165805353961332
+    second: siamese dance movements_4
+  - first:
+      213: 473254617446724819
+    second: PawStand_1
+  - first:
+      213: 4177699833012036629
+    second: PawStand_2
+  - first:
+      213: 4506665972238067651
+    second: PawStand_3
+  - first:
+      213: 3651491841697993078
+    second: siamese dance movements_8
+  - first:
+      213: -1080145609345583659
+    second: siamese dance movements_9
+  - first:
+      213: 4957550511176552900
+    second: Wigle_1
+  - first:
+      213: 827916450944586967
+    second: Wigle_2
+  - first:
+      213: 1393376078798671157
+    second: Wigle_3
+  - first:
+      213: 7750724742996705581
+    second: Wigle_4
+  - first:
+      213: -3219125340589499668
+    second: Wigle_5
+  - first:
+      213: -68365349676264548
+    second: Shake_1
+  - first:
+      213: 6440106439416869916
+    second: Shake_2
+  - first:
+      213: 3426752254635733629
+    second: Shake_3
+  - first:
+      213: 7610251158092184034
+    second: Shake_4
+  - first:
+      213: 4225794220715482215
+    second: Shake_5
+  - first:
+      213: -1025619776582728093
+    second: wnbFloss_3
+  - first:
+      213: 7296856322214302613
+    second: wnbFloss_2
+  - first:
+      213: 7019089531097755266
+    second: siamese dance movements_22
+  - first:
+      213: 2716401955696901105
+    second: wnbFloss_4
+  - first:
+      213: -4579439929881515860
+    second: wnbFloss_7
+  - first:
+      213: -3613143575953146160
+    second: wnbFloss_8
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: walk_1
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 3862
+        width: 497
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 714dddd654c4b5d70800000000000000
+      internalID: 9032897338701370391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_2
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 3862
+        width: 499
+        height: 548
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b6c3f079715a3470800000000000000
+      internalID: 8375096039076775600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_3
+      rect:
+        serializedVersion: 2
+        x: 1185
+        y: 3862
+        width: 494
+        height: 550
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ef7d24f31fae56d0800000000000000
+      internalID: -2999767801546309661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_4
+      rect:
+        serializedVersion: 2
+        x: 1714
+        y: 3860
+        width: 504
+        height: 547
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc73c7681c7275170800000000000000
+      internalID: 8167040161398142927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PawStand_1
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 3100
+        width: 431
+        height: 663
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d4b9313196519600800000000000000
+      internalID: 473254617446724819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PawStand_2
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 3100
+        width: 437
+        height: 663
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51424ec1ddb2af930800000000000000
+      internalID: 4177699833012036629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PawStand_3
+      rect:
+        serializedVersion: 2
+        x: 1253
+        y: 3102
+        width: 448
+        height: 661
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c7279c03d4ea8e30800000000000000
+      internalID: 4506665972238067651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siamese dance movements_9
+      rect:
+        serializedVersion: 2
+        x: 2818
+        y: 3414
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d532498a4d8201f0800000000000000
+      internalID: -1080145609345583659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wigle_1
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 2363
+        width: 303
+        height: 550
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c11cb67ce1ccc440800000000000000
+      internalID: 4957550511176552900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wigle_2
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 2354
+        width: 296
+        height: 550
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d4114a20a95d7b00800000000000000
+      internalID: 827916450944586967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wigle_3
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 2357
+        width: 306
+        height: 536
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53d42574924465310800000000000000
+      internalID: 1393376078798671157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wigle_4
+      rect:
+        serializedVersion: 2
+        x: 1468
+        y: 2354
+        width: 303
+        height: 552
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d214622b61b109b60800000000000000
+      internalID: 7750724742996705581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wigle_5
+      rect:
+        serializedVersion: 2
+        x: 1910
+        y: 2354
+        width: 303
+        height: 552
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cea54b2fe8e5353d0800000000000000
+      internalID: -3219125340589499668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shake_1
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 1717
+        width: 279
+        height: 519
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c93d991a31e1d0ff0800000000000000
+      internalID: -68365349676264548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shake_2
+      rect:
+        serializedVersion: 2
+        x: 637
+        y: 1723
+        width: 264
+        height: 515
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c14f52d7faadf5950800000000000000
+      internalID: 6440106439416869916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shake_3
+      rect:
+        serializedVersion: 2
+        x: 1062
+        y: 1723
+        width: 228
+        height: 510
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d72f4d615054e8f20800000000000000
+      internalID: 3426752254635733629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shake_4
+      rect:
+        serializedVersion: 2
+        x: 1420
+        y: 1723
+        width: 264
+        height: 515
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e9f6918b1b0d9960800000000000000
+      internalID: 7610251158092184034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shake_5
+      rect:
+        serializedVersion: 2
+        x: 1866
+        y: 1726
+        width: 266
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76c15ab547905aa30800000000000000
+      internalID: 4225794220715482215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wnbFloss_3
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 980
+        width: 307
+        height: 558
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 366cb264f3444c1f0800000000000000
+      internalID: -1025619776582728093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wnbFloss_2
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 972
+        width: 307
+        height: 556
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59395a62a24a34560800000000000000
+      internalID: 7296856322214302613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siamese dance movements_22
+      rect:
+        serializedVersion: 2
+        x: 1018
+        y: 972
+        width: 277
+        height: 554
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28eaeb36db0d86160800000000000000
+      internalID: 7019089531097755266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wnbFloss_4
+      rect:
+        serializedVersion: 2
+        x: 1426
+        y: 967
+        width: 271
+        height: 539
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fb7d74cf2992b520800000000000000
+      internalID: 2716401955696901105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wnbFloss_7
+      rect:
+        serializedVersion: 2
+        x: 1774
+        y: 969
+        width: 299
+        height: 552
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca82c2d85af8270c0800000000000000
+      internalID: -4579439929881515860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wnbFloss_8
+      rect:
+        serializedVersion: 2
+        x: 2117
+        y: 969
+        width: 290
+        height: 550
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0def3d89f098bddc0800000000000000
+      internalID: -3613143575953146160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 3fb9bb0abbb1e4d47b5adc81449c3664
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
