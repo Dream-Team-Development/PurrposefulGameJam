@@ -5,6 +5,7 @@ namespace SushiGame.FoodStuff
 {
     public class Meal : AiAgent, IInteract
     {
+        //All items use this same script, just set values to zero if you don't want an effect
         [Header("Interact")]
         [SerializeField] private float _weightGain;
         [SerializeField] private float _energyGain;

@@ -6,19 +6,20 @@ namespace SushiGame.Controller
 {
     public class AiController : MonoBehaviour
     {
-        
+        [Header("Movement Path")]
         [SerializeField] private int _segments = 32;
         [SerializeField] private float _xRadius = 2f;
         [SerializeField] private float _yRadius = 2f;
         [SerializeField] private Transform _centre;
         [SerializeField] private Color _colour = Color.blue;
         
-        public Vector3[] _positions = new Vector3[0];
+        private Vector3[] _positions = new Vector3[0];
         private float _lastXRadius;
         private float _lastYRadius;
 
         public Vector3[] Positions => _positions;
-
+        //This is run entirely in editor for adjusting the node pathway for items to travel
+        //You shouldn't need to edit this script
         #region Create Positions
 
         private void OnValidate()
@@ -28,7 +29,7 @@ namespace SushiGame.Controller
                 _positions = new Vector3[_segments];
                 _lastXRadius = _xRadius;
                 _lastYRadius = _yRadius;
-                
+
                 var angle = 0f;
                 var rot = Quaternion.LookRotation(_centre.forward, _centre.up);
                 var thisPoint = Vector3.zero;
