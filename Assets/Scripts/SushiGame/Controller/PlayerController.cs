@@ -1,7 +1,11 @@
-﻿using UnityEngine;
+﻿using System;
+using SushiGame.FoodStuff;
+using UnityEngine;
+using UnityEngine.UI;
 
 namespace SushiGame.Controller
 {
+    [RequireComponent(typeof(Rigidbody2D), typeof(Collider2D))]
     public class PlayerController : MonoBehaviour
     {
         [Header("Dependencies")]
@@ -11,6 +15,23 @@ namespace SushiGame.Controller
         [SerializeField] private float _startWeight;
         [SerializeField] private float _startEnergy;
         [SerializeField] private float _sicknessLevel;
+        [SerializeField] private Rigidbody2D _rb;
+        
+        [Header("Interact")]
+        [SerializeField] private KeyCode _interactKey;
+        [SerializeField] private float _radius;
+        
+        [Header("Cat Info")]
+        [SerializeField] private Text _weightDisplay;
+        [SerializeField] private float _weightLossRate;
+        [SerializeField] private Text _energyDisplay;
+        [SerializeField] private Text _sicknessDisplay;
+        [SerializeField] private float _sicknessLossWeight;
+        [SerializeField] private float _circleSpeed;
+        [SerializeField] private float _circleSize;
+
+        private bool _isSick;
+
         private float _xMov;
         private float _yMov;
 
@@ -32,48 +53,55 @@ namespace SushiGame.Controller
             set => _sicknessLevel = value;
         }
 
-        private void Update()
+        private void FixedUpdate()
         {
+            if (_startWeight > 0) _startWeight -= _weightLossRate * Time.deltaTime;
+            if (_startWeight < 0) _startWeight = 0;
+            
+            if (_weightDisplay) _weightDisplay.text = "Weight: " + _startWeight;
+            if (_energyDisplay) _energyDisplay.text = "Energy: " + _startEnergy;
+            if (_sicknessDisplay) _sicknessDisplay.text = "Sickness: " + _sicknessLevel;
+
+            if (_sicknessLevel > 0)
+            {
+                if (!_isSick) _isSick = true;
+                _sicknessLevel -= Time.deltaTime;
+                
+                var direction = Vector3.zero - transform.position;
+
+                var xPos = Mathf.Sin(Time.time * _circleSpeed) * _circleSize;
+                var yPos = Mathf.Cos(Time.time * _circleSpeed) * _circleSize;
+
+                direction.x += xPos;
+                direction.y += yPos;
+
+                _rb.velocity += new Vector2(direction.x, direction.y).normalized * _speed;
+                _rb.velocity = Vector2.ClampMagnitude(_rb.velocity, _speed);
+                return;
+            }
+
+            if (_sicknessLevel < 0) _sicknessLevel = 0;
+            
+            if (_isSick) _isSick = false;
+            
             _xMov = Input.GetAxis("Horizontal");
             _yMov = Input.GetAxis("Vertical");
-            var nextPos = transform.position + new Vector3(_xMov, _yMov, 0).normalized * (_speed * Time.deltaTime);
 
-            if (Vector3.Distance(_centre.position, nextPos) > _maxDistance) return;
-        
-            transform.position += new Vector3(_xMov, _yMov, 0).normalized * (_speed * Time.deltaTime);
-        }
-
-        [Header("Debug Circle")]
-        [SerializeField] private int _segments = 32;
-        [SerializeField] private Color _color = Color.blue;
-
-#if UNITY_EDITOR
-        private void OnDrawGizmos()
-        {
-            DrawEllipse(_centre.position, _centre.forward, _centre.up, _maxDistance, _maxDistance, _segments, _color);
-        }
- 
-        private static void DrawEllipse(Vector3 pos, Vector3 forward, Vector3 up, float radiusX, float radiusY, int segments, Color color, float duration = 0)
-        {
-            float angle = 0f;
-            Quaternion rot = Quaternion.LookRotation(forward, up);
-            Vector3 lastPoint = Vector3.zero;
-            Vector3 thisPoint = Vector3.zero;
- 
-            for (int i = 0; i < segments + 1; i++)
+            _rb.velocity += new Vector2(_xMov, _yMov).normalized * _speed;
+            _rb.velocity = Vector2.ClampMagnitude(_rb.velocity, _speed);
+            
+            if (Input.GetKey(_interactKey) && !_isSick)
             {
-                thisPoint.x = Mathf.Sin(Mathf.Deg2Rad * angle) * radiusX;
-                thisPoint.y = Mathf.Cos(Mathf.Deg2Rad * angle) * radiusY;
- 
-                if (i > 0)
-                {
-                    Debug.DrawLine(rot * lastPoint + pos, rot * thisPoint + pos, color, duration);
-                }
- 
-                lastPoint = thisPoint;
-                angle += 360f / segments;
+                var hits = Physics2D.OverlapCircle(transform.position, _radius, -8);
+                if (!hits) return;
+                var interact = hits.GetComponent<IInteract>();
+                interact?.Interact(this);
             }
         }
-#endif
+
+        private void OnDrawGizmos()
+        {
+            Gizmos.DrawWireSphere(transform.position, _radius);
+        }
     }
 }
