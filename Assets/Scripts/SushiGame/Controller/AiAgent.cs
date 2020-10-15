@@ -11,18 +11,16 @@ namespace SushiGame.Controller
         [SerializeField] private float _speed;
         [SerializeField] private AiController _aiController;
         [SerializeField] private float _radius;
-        
+        //Colours used for rave party time
         private Color[] _colors = {Color.blue, Color.cyan, Color.green, Color.magenta, Color.red, Color.yellow};
         
         public int _startPos;
         public int _nextPos;
-
-        public AiController ControllerAi
-        {
-            get => _aiController;
-            set => _aiController = value;
-        }
-
+        
+        //Draw area used to check if other items, debug to show visually
+        //Code further down checks if the spawn position has another item nearby
+        //Prevents items spawning on top of each other
+        //This debugs that for you
         private void OnDrawGizmos()
         {
             Gizmos.DrawWireSphere(transform.position, _radius);
@@ -30,8 +28,11 @@ namespace SushiGame.Controller
 
         private void Awake()
         {
+            //Grab the AI controller for movement
             _aiController = FindObjectOfType<AiController>();
+            //Get a position out of the node list
             _startPos = Random.Range(0, _aiController.Positions.Length);
+            //Check position isn't occupado
             while (Physics2D.OverlapCircle(_aiController.Positions[_startPos], _radius, -8))
             {
                 _startPos = Random.Range(0, _aiController.Positions.Length);
@@ -42,6 +43,7 @@ namespace SushiGame.Controller
 
         private void Update()
         {
+            //Loop around the array of positions
             if (_startPos == _aiController.Positions.Length - 1) _nextPos = 0;
             else _nextPos = _startPos + 1;
             var direction = _aiController.Positions[_nextPos] - transform.position;
@@ -55,6 +57,7 @@ namespace SushiGame.Controller
 
         public IEnumerator DeathTime()
         {
+            //Kill the item
             var time = 10f;
             var currentTime = 0f;
 
@@ -68,6 +71,7 @@ namespace SushiGame.Controller
 
         public IEnumerator ColorChange()
         {
+            //Rave time
             var alwaysTrue = true;
             var render = GetComponent<SpriteRenderer>();
             var current = Random.Range(0, _colors.Length);
