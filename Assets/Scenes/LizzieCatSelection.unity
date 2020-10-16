@@ -702,7 +702,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 190.2, y: 58.20581}
+  m_AnchoredPosition: {x: 190.2, y: 50.6}
   m_SizeDelta: {x: 161.37341, y: 40.02391}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &294357625
@@ -2867,7 +2867,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -187.1, y: 58.20581}
+  m_AnchoredPosition: {x: -187.1, y: 50.600006}
   m_SizeDelta: {x: 161.37341, y: 40.02391}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1462916789
@@ -3443,16 +3443,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1688764302}
-        m_TargetAssemblyTypeName: CatSelection.CatSelectionManager, Assembly-CSharp
-        m_MethodName: LetTheGamesBegin
-        m_Mode: 1
+      - m_Target: {fileID: 1460465420145358527, guid: 3f42fab6a4e3c8d40b936892e25792b7, type: 3}
+        m_TargetAssemblyTypeName: SceneManager, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: IanDevScene
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &2124224897
