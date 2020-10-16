@@ -132,7 +132,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Siamese_WalkUp
+  m_Name: TurkishAngora_WalkUp
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -149,7 +149,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: b45b3ab924a5d3748a557e04b1155394, type: 2}
+  m_Motion: {fileID: 7400000, guid: 64ad95805fd4e7f469c324537b655e20, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -286,7 +286,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SiameseCat
+  m_Name: TurkishAngoraSushi
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: Speed
@@ -396,7 +396,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Siamese_WalkDown
+  m_Name: TurkishAngora_WalkDown
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -413,7 +413,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 514b47c740a9df447be29b847425972b, type: 2}
+  m_Motion: {fileID: 7400000, guid: 7fd5dd1edcf1373479425d0ae8e0486e, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -476,7 +476,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Siamese_Idle
+  m_Name: TurkishAngora_Idle
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -493,7 +493,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: f22216e098c1a9e4897afc54247ef342, type: 2}
+  m_Motion: {fileID: 7400000, guid: d3c00839d902fb848b3e13ffe5ff1124, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -531,7 +531,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Siamese_WalkLeft
+  m_Name: TurkishAngora_WalkLeft
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -548,7 +548,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 990e2780a2e44aa44bd2d7523c8f2835, type: 2}
+  m_Motion: {fileID: 7400000, guid: 91d0cfa1115ae7a4380091fe29783b64, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -695,7 +695,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Siamese_WalkRight
+  m_Name: TurkishAngora_WalkRight
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -712,7 +712,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: eceb81b76522ba64e89d69a5d473f3ec, type: 2}
+  m_Motion: {fileID: 7400000, guid: 042f696d4d214bb4d92a14c4995ed37c, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

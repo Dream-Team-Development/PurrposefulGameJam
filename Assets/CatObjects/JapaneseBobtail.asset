@@ -16,3 +16,5 @@ MonoBehaviour:
   profileImage: {fileID: -7286548500120324848, guid: 908503973f7c98145bea173fc16e433b, type: 3}
   idealWeight: 3
   sexImage: {fileID: -3344345146683644454, guid: b89cd3f98d48afb4abe47fe224da6fa4, type: 3}
+  sushiGameAnimator: {fileID: 9100000, guid: c2b14f3492ff0ad4b93144a0a20e5b81, type: 2}
+  rhythmGameAnimator: {fileID: 9100000, guid: a2192a4fbc6ca0449a7f9fb19e0d7f9e, type: 2}

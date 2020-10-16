@@ -43,6 +43,8 @@ namespace SushiGame.Controller
         private float _xMov;
         private float _yMov;
 
+        public CatObject CatType { get; set; }
+
         //Properties for weight, energy and sickness effected by picked up items
         public float Weight
         {
@@ -60,6 +62,11 @@ namespace SushiGame.Controller
         {
             get => _sicknessLevel;
             set => _sicknessLevel = value;
+        }
+
+        private void Start()
+        {
+            _animator.runtimeAnimatorController = CatType.sushiGameAnimator;
         }
 
         private void FixedUpdate()

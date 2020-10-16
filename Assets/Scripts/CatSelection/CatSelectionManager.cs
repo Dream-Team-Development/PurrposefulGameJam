@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace CatSelection
@@ -140,13 +141,11 @@ namespace CatSelection
                 case 1:
                     _p1CatChoice = _p1Index;
                     _p1Selected = true;
-                    Debug.Log("P1 selected " + _p1Options[_p1CatChoice].catName);
                     break;
                 
                 case 2:
                     _p2CatChoice = _p2Index;
                     _p2Selected = true;
-                    Debug.Log("P2 selected " + _p2Options[_p2CatChoice].catName);
                     break;
             }
             
@@ -155,9 +154,14 @@ namespace CatSelection
         }
 
 
-        public void LetTheGamesBegin()
+        public void LetTheGamesBegin(string sceneName)
         {
             Debug.Log("Let the games begin");
+
+            PlayerPrefs.SetInt("P1Cat", _p1CatChoice); 
+            PlayerPrefs.SetInt("P2Cat", _p2CatChoice); 
+
+            SceneManager.LoadScene(sceneName);
             // Set player 1 and 2 cats from chosen cat index
             // Load scene for sushi game
         }

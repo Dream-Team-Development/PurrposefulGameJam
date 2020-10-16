@@ -7,7 +7,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: TurkishAngora_Dance03
+  m_Name: JapaneseBobtail_Dance03
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -21,7 +21,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 89fe5f4db59526e47a896244c303df31, type: 2}
+  m_Motion: {fileID: 7400000, guid: c0fab7fd1c43755419877eacc37b8603, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -59,7 +59,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: TurkishAngora_Dance01
+  m_Name: JapaneseBobtail_Dance01
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -73,7 +73,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: f5998bf9e389dc346ae83a5075d54fcd, type: 2}
+  m_Motion: {fileID: 7400000, guid: 234a7c1df0c7e3845b741ff465a8207a, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -111,7 +111,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: TurkishAngora_Walk
+  m_Name: JapaneseBobtail_Walk
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -125,7 +125,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: fed84fa19adb85b4abb6e123bfac5e17, type: 2}
+  m_Motion: {fileID: 7400000, guid: 15fdda11e793f35448cec63caf298115, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -137,7 +137,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: TurkishAngoraCat
+  m_Name: JapaneseBobtailRhythm
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: DanceIndex
@@ -216,7 +216,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: TurkishAngora_Dance02
+  m_Name: JapaneseBobtail_Dance02
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -230,7 +230,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 1842ced26ec4c394b8eb359b8b6ec4ce, type: 2}
+  m_Motion: {fileID: 7400000, guid: bdaf03fcef35f8a4583ad278131a76a2, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

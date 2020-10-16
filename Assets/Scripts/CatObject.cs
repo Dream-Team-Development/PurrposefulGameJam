@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using UnityEditor.Animations;
+using UnityEngine;
 
 [CreateAssetMenu(fileName = "Cat", menuName = "Cat")]
 
@@ -12,6 +13,6 @@ public class CatObject : ScriptableObject
     public Sprite sexImage;
 
     [Header("Animations")]
-    public AnimationClip walking;
-    public AnimationClip[] dances;
+    public AnimatorController sushiGameAnimator;
+    public AnimatorController rhythmGameAnimator;
 }

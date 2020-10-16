@@ -132,7 +132,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MixBreed_WalkUp
+  m_Name: Ragdoll_WalkUp
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -149,7 +149,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: ce8b530d5b1fa5242b94fd3a3a18a7c4, type: 2}
+  m_Motion: {fileID: 7400000, guid: 779ff347e6a78c34ca3e7fed3fb1cd07, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -286,7 +286,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MixBreedCat
+  m_Name: RagdollSushi
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: Speed
@@ -396,7 +396,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MixBreed_WalkDown
+  m_Name: Ragdoll_WalkDown
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -413,7 +413,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 0d776385d55160841944a1ee376516b0, type: 2}
+  m_Motion: {fileID: 7400000, guid: c1ad70971b7b33f41b1314977c3bef8b, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -476,7 +476,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MixBreed_Idle
+  m_Name: Ragdoll_Idle
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -493,7 +493,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: dc0d7eec8beb54f418b2200f5ef44310, type: 2}
+  m_Motion: {fileID: 7400000, guid: a9cb4a87307ed1b4aae7fb5f8e0ca8db, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -531,7 +531,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MixBreed_WalkLeft
+  m_Name: Ragdoll_WalkLeft
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -548,7 +548,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 3baecc2a3efb7bc4490a5d593f190dd2, type: 2}
+  m_Motion: {fileID: 7400000, guid: 7830802057790eb42a4d52903170aa45, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -695,7 +695,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MixBreed_WalkRight
+  m_Name: Ragdoll_WalkRight
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -712,7 +712,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: e1a6d86137edb49438ac542e4e33dae8, type: 2}
+  m_Motion: {fileID: 7400000, guid: db61aececa3cc7c44bf9a61e9c124596, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
