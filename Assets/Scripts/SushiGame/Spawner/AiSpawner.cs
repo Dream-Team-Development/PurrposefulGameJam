@@ -24,6 +24,8 @@ namespace SushiGame.Spawner
 
         private void Update()
         {
+            if (!BaseGameManager.Instance.Playing) return;
+            
             //This was taken from my ludum dare game, spawns an object every so many times (spawn rate)
             if (_gameOver) return;
             _spawnTimer += Time.deltaTime;

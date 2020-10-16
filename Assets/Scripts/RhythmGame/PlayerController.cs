@@ -21,6 +21,9 @@ namespace RhythmGame
         protected float weight, energy;
         protected MusicNote _noteToHit;
         protected int _danceIndex;
+        
+        public CatObject CatType { get; set; }
+        
 
         private void Start()
         {
@@ -30,6 +33,7 @@ namespace RhythmGame
             _notePrefab.HitPos = _hitPoint.transform.position;
 
             if (!_catAnimator) _catAnimator = GetComponent<Animator>();
+            _catAnimator.runtimeAnimatorController = CatType.rhythmGameAnimator;
 
             _danceIndex = 0;
             _totalDanceAnimations *= _animationSwitchRate;

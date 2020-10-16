@@ -71,6 +71,7 @@ namespace SushiGame.Controller
 
         private void FixedUpdate()
         {
+            if (!BaseGameManager.Instance.Playing) return;
             
             //Handles preventing start weight dropping below zero, reducing weight over time, and displaying information
             if (_startWeight < 0) _startWeight = 0;
@@ -82,8 +83,6 @@ namespace SushiGame.Controller
             //If the cat gets sick this will block movement and create new movement
             if (_sicknessLevel > 0)
             {
-                _animator.SetInteger(_animatorParameter, 5);
-                
                 _sicknessLevel -= Time.deltaTime;
                 
                 var direction = Vector3.zero - transform.position;

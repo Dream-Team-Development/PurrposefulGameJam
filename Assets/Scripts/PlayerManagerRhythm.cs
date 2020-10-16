@@ -1,8 +1,7 @@
-﻿using SushiGame;
-using SushiGame.Controller;
+﻿using RhythmGame;
 using UnityEngine;
 
-public class PlayerManager : MonoBehaviour
+public class PlayerManagerRhythm : MonoBehaviour
 {
     [SerializeField] private CatObject[] _cats;
     [SerializeField] private PlayerController _p1, _p2;
