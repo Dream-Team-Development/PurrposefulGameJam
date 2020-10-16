@@ -35,9 +35,7 @@ namespace RhythmGame
             // Missed completely
             if (_noteToHit.transform.position.y >= _noteToHit.DespawnPos.y && _noteToHit.transform.position.y <= _noteToHit.HitPos.y - 2)
             {
-                GuiManager.Instance.P1Weight -= _noteToHit.Points;
-                _noteToHit.TriggerFloatingText("Missed!");
-                
+                Hit(false, false);
                 Destroy(_noteToHit.gameObject);
             }
         }
@@ -65,18 +63,21 @@ namespace RhythmGame
         {
             if (hit)
             {
+                UpdateEnergy(_energyChange);
                 UpdateStreak(true);
                 GuiManager.Instance.P1Weight += _noteToHit.Points;
                 _noteToHit.TriggerFloatingText(_hitFeedback[Random.Range(0, _hitFeedback.Length)]);
             }
             else if (early)
             {
+                UpdateEnergy(_energyChange * 2);
                 UpdateStreak(false);
                 GuiManager.Instance.P1Weight -= _noteToHit.Points / 2;
                 _noteToHit.TriggerFloatingText("Too early!");
             }
             else
             {
+                UpdateEnergy(_energyChange / 2);
                 UpdateStreak(false);
                 GuiManager.Instance.P1Weight -= _noteToHit.Points / 2;
                 _noteToHit.TriggerFloatingText("Missed!");

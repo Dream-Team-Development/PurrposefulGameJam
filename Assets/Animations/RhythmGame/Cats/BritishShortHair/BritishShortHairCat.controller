@@ -7,7 +7,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Siamese_Dance03
+  m_Name: BritishShortHair_Dance03
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -21,7 +21,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 49d983b0e74fc704cb079daa5efb8f8b, type: 2}
+  m_Motion: {fileID: 7400000, guid: 30ddb93fcf755c34c801dd37958a04c2, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -59,7 +59,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Siamese_Dance01
+  m_Name: BritishShortHair_Dance01
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -73,7 +73,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 636741bcbea65f241a3ca29d083646b6, type: 2}
+  m_Motion: {fileID: 7400000, guid: ce21179535a824a4b95ec6915462dffc, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -111,7 +111,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Siamese_Walk
+  m_Name: BritishShortHair_Walk
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -125,7 +125,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 0103f9756072cf24d941f512ec0d3b92, type: 2}
+  m_Motion: {fileID: 7400000, guid: 8365b92c094f32b4c8969131cf30c971, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -137,7 +137,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SiameseCat
+  m_Name: BritishShortHairCat
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: DanceIndex
@@ -216,7 +216,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Siamese_Dance02
+  m_Name: BritishShortHair_Dance02
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -230,7 +230,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: de5bbaf4b79ca2441a7a95bf6f4818cd, type: 2}
+  m_Motion: {fileID: 7400000, guid: 5137deb1197fca845b52374a52480504, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

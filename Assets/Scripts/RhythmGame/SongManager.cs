@@ -68,7 +68,9 @@ namespace RhythmGame
                 _nextIndex++;
             }
 
-            if(_nextIndex >= _notes.Length) _audioSource.Stop();
+            //if (_nextIndex >= _notes.Length) _nextIndex = 1;
+
+            if(_nextIndex == _notes.Length) _audioSource.Stop();
         }
     }
 }
