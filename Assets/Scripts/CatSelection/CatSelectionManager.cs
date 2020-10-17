@@ -162,8 +162,6 @@ namespace CatSelection
             PlayerPrefs.SetInt("P2Cat", _p2CatChoice); 
 
             SceneManager.LoadScene(sceneName);
-            // Set player 1 and 2 cats from chosen cat index
-            // Load scene for sushi game
         }
     }
 }

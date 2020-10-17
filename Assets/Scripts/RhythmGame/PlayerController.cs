@@ -9,7 +9,7 @@ namespace RhythmGame
         [SerializeField] private MusicNote _notePrefab;
         [SerializeField] private Slider _energyBarSlider;
         [SerializeField] protected float _energyChange;
-        [SerializeField] protected GameObject _hitPoint;
+        [SerializeField] protected HitPoint _hitPoint;
         [SerializeField] protected string[] _hitFeedback = {"Nice!"};
 
         [Header("Animations")]
@@ -30,7 +30,7 @@ namespace RhythmGame
             // TODO: Energy should be set from PlayerPrefs
             energy = 100;
             
-            _notePrefab.HitPos = _hitPoint.transform.position;
+            _notePrefab.HitPos = _hitPoint.gameObject.transform.position;
 
             if (!_catAnimator) _catAnimator = GetComponent<Animator>();
             _catAnimator.runtimeAnimatorController = CatType.rhythmGameAnimator;
@@ -43,9 +43,10 @@ namespace RhythmGame
         public void ProduceNote()
         {
             _noteToHit = Instantiate(_notePrefab, _notePrefab.SpawnPos, Quaternion.identity);
-            var position = _hitPoint.transform.position;
+            var position = _hitPoint.gameObject.transform.position;
             
             _noteToHit.HitPos = new Vector2(position.x, position.y);
+            _hitPoint.SpriteRenderer.sprite = _noteToHit.SpriteRenderer.sprite;
         }
 
 

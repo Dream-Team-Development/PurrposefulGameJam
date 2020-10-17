@@ -26,7 +26,8 @@ namespace RhythmGame
         private Vector2 _hitPos = new Vector2(0, 5);
         private Vector2 _despawnPos = new Vector2(0, -5);
         private Vector2 _floatingTextSpawn = new Vector2(0, 5);
-        
+
+        public SpriteRenderer SpriteRenderer => _spriteRenderer;
         public int Points => _points;
         public Vector2 SpawnPos => _spawnPos;
         public Vector2 DespawnPos => _despawnPos;

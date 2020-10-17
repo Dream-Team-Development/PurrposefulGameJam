@@ -35,19 +35,16 @@ namespace RhythmGame
             Instance = GetComponent<SongManager>();
             
             if (!_audioSource) _audioSource = GetComponent<AudioSource>();
+            _audioSource.Stop();
             
-            // Calculate seconds in one beat
-            _secPerBeat = 60f / _bpm;
-            
-            // Record time when song starts
-            _dspTimeSong = (float) AudioSettings.dspTime;
-            
-            _audioSource.Play();
+            RhythmGameManager.Instance.TriggerStart();
         }
 
 
         private void Update()
         {
+            if (!RhythmGameManager.Instance.Playing) return;
+
             // Calculate current position (in seconds)
             _songPosition = (float) AudioSettings.dspTime - _dspTimeSong;
 
@@ -71,6 +68,17 @@ namespace RhythmGame
             //if (_nextIndex >= _notes.Length) _nextIndex = 1;
 
             if(_nextIndex == _notes.Length) _audioSource.Stop();
+        }
+
+        public void StartGame()
+        {
+            // Calculate seconds in one beat
+            _secPerBeat = 60f / _bpm;
+            
+            // Record time when song starts
+            _dspTimeSong = (float) AudioSettings.dspTime;
+            
+            SongManager.Instance.Audio.Play();
         }
     }
 }

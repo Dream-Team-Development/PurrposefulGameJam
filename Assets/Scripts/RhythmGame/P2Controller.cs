@@ -8,6 +8,7 @@ namespace RhythmGame
     {
         private void Update()
         {
+            if (!RhythmGameManager.Instance.Playing) return;
             if (!_noteToHit) return;
             
             switch (_noteToHit.ThisDirection)

@@ -3027,7 +3027,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad95918a1d22f534499b4b43bc126af4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playTime: 10
+  _playTime: 15
   _startInfo: {fileID: 2136222492}
   _endGame: {fileID: 1012831312}
   _countdownText: {fileID: 1078090643}

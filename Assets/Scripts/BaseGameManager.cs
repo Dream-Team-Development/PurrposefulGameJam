@@ -6,24 +6,24 @@ public class BaseGameManager : MonoBehaviour
 {
      public static BaseGameManager Instance;
      
-     [SerializeField] private float _playTime;
-     [SerializeField] private GameObject _startInfo, _endGame;
-     [SerializeField] private Text _countdownText;
+     [SerializeField] protected float _playTime;
+     [SerializeField] protected GameObject _startInfo, _endGame;
+     [SerializeField] protected Text _countdownText;
 
-     private float _timeLeft, _startCountdown, _endCountdown;
-     private bool _canStart, _playing;
+     protected float _timeLeft, _startCountdown, _endCountdown;
+     protected bool _canStart, _playing;
 
 
      public bool Playing => _playing;
 
 
-     private void Start()
+     protected virtual void Start()
      {
           Instance = GetComponent<BaseGameManager>();
           
-          _startInfo.SetActive(true);
-          _endGame.SetActive(false);
-          _countdownText.gameObject.SetActive(false);
+          if(_startInfo) _startInfo.SetActive(true);
+          if(_endGame) _endGame.SetActive(false);
+          if(_countdownText) _countdownText.gameObject.SetActive(false);
           
           _timeLeft = _playTime;
 
@@ -58,15 +58,15 @@ public class BaseGameManager : MonoBehaviour
      }
 
 
-     public void TriggerStart()
+     public virtual void TriggerStart()
      {
-          _startInfo.SetActive(false);
+          if(_startInfo) _startInfo.SetActive(false);
           _canStart = true;
-          _countdownText.gameObject.SetActive(true);
+          if(_countdownText) _countdownText.gameObject.SetActive(true);
      }
 
 
-     private void StartingCountdown()
+     protected virtual void StartingCountdown()
      {
           _startCountdown -= Time.deltaTime;
           _countdownText.text = Math.Ceiling(_startCountdown).ToString();
@@ -98,8 +98,8 @@ public class BaseGameManager : MonoBehaviour
      
      private void GameOver()
      {
-          _countdownText.gameObject.SetActive(false);
-          _endGame.SetActive(true);
+          if(_countdownText) _countdownText.gameObject.SetActive(false);
+          if(_endGame) _endGame.SetActive(true);
           _playing = false;
      }
 }
