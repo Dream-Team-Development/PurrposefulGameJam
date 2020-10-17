@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: e346e0e16fbdae7458d2ff8ede152896
+  - enabled: 1
     path: Assets/Scenes/LizzieCatSelection.unity
     guid: 2c29a664146ae97408d432f4b767d211
   - enabled: 1
