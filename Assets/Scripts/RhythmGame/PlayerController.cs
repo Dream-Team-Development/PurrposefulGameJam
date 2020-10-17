@@ -12,7 +12,7 @@ namespace RhythmGame
         [SerializeField] private TMP_Text _weightText;
         [SerializeField] protected float _energyChange, _weightChange;
         [SerializeField] protected float _weightLossRate;
-        [SerializeField] protected HitPoint _hitPoint;
+        [SerializeField] protected GameObject _hitPoint;
         [SerializeField] protected string[] _hitFeedback = {"Nice!"};
 
         [Header("Animations")]
@@ -49,7 +49,7 @@ namespace RhythmGame
 
         private void Start()
         {
-            _notePrefab.HitPos = _hitPoint.gameObject.transform.position;
+            _notePrefab.HitPos = _hitPoint.transform.position;
 
             if (!_catAnimator) _catAnimator = GetComponent<Animator>();
             _catAnimator.runtimeAnimatorController = CatType.rhythmGameAnimator;
@@ -62,20 +62,19 @@ namespace RhythmGame
         public void ProduceNote()
         {
             _noteToHit = Instantiate(_notePrefab, _notePrefab.SpawnPos, Quaternion.identity);
-            var position = _hitPoint.gameObject.transform.position;
+            var position = _hitPoint.transform.position;
             
             _noteToHit.HitPos = new Vector2(position.x, position.y);
-            _hitPoint.SpriteRenderer.sprite = _noteToHit.SpriteRenderer.sprite;
         }
 
 
-        protected void UpdateWeight()
+        private void UpdateWeight()
         {
             if (_weightText) _weightText.text = (Mathf.Round(_weight * 10f) / 10f) + "kg";
         }
 
 
-        protected void UpdateEnergy()
+        private void UpdateEnergy()
         {
             _energyBarSlider.value = _energy / 100;
         }

@@ -70,7 +70,6 @@ namespace RhythmGame
                 Energy = _energyChange;
                 Weight = _weightChange;
                 UpdateStreak(true);
-                GuiManager.Instance.P1Weight += _noteToHit.Points;
                 _noteToHit.TriggerFloatingText(_hitFeedback[Random.Range(0, _hitFeedback.Length)]);
             }
             else if (early)
@@ -78,7 +77,6 @@ namespace RhythmGame
                 Energy = _energyChange * 2;
                 Weight = _weightChange * 2;
                 UpdateStreak(false);
-                GuiManager.Instance.P1Weight -= _noteToHit.Points / 2;
                 _noteToHit.TriggerFloatingText("Too early!");
             }
             else
@@ -86,7 +84,6 @@ namespace RhythmGame
                 Energy = _energyChange / 2;
                 Weight = _weightChange / 2;
                 UpdateStreak(false);
-                GuiManager.Instance.P1Weight -= _noteToHit.Points / 2;
                 _noteToHit.TriggerFloatingText("Missed!");
             }
             

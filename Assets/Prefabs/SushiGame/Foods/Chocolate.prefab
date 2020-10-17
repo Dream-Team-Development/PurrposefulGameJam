@@ -103,7 +103,7 @@ MonoBehaviour:
   _nextPos: 0
   _weightGain: 2
   _energyGain: 1
-  _sicknessGain: 15
+  _sicknessGain: 7
 --- !u!58 &7758051734048937784
 CircleCollider2D:
   m_ObjectHideFlags: 0

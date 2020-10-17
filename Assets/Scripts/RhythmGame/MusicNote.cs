@@ -17,7 +17,6 @@ namespace RhythmGame
 
         [SerializeField] private FloatingScript _floatingTextPrefab;
         [SerializeField] private float _floatingTextOffsetX, _floatingTextOffsetY;
-        //[SerializeField] private Vector2 _floatingTextSpawn = new Vector2(0, 5);
 
         private SongManager _songManager;
         private KeyCode _keyToHit;
