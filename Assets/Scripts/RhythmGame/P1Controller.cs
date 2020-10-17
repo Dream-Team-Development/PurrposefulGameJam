@@ -11,6 +11,9 @@ namespace RhythmGame
             if (!RhythmGameManager.Instance.Playing) return;
             if (!_noteToHit) return;
             
+            if (_weight < 0) _weight = 0;
+            if (_weight > 0) _weight -= _weightLossRate * Time.deltaTime;
+            
             switch (_noteToHit.ThisDirection)
             {
                 case MusicNote.Direction.Down:
@@ -64,21 +67,24 @@ namespace RhythmGame
         {
             if (hit)
             {
-                UpdateEnergy(_energyChange);
+                Energy = _energyChange;
+                Weight = _weightChange;
                 UpdateStreak(true);
                 GuiManager.Instance.P1Weight += _noteToHit.Points;
                 _noteToHit.TriggerFloatingText(_hitFeedback[Random.Range(0, _hitFeedback.Length)]);
             }
             else if (early)
             {
-                UpdateEnergy(_energyChange * 2);
+                Energy = _energyChange * 2;
+                Weight = _weightChange * 2;
                 UpdateStreak(false);
                 GuiManager.Instance.P1Weight -= _noteToHit.Points / 2;
                 _noteToHit.TriggerFloatingText("Too early!");
             }
             else
             {
-                UpdateEnergy(_energyChange / 2);
+                Energy = _energyChange / 2;
+                Weight = _weightChange / 2;
                 UpdateStreak(false);
                 GuiManager.Instance.P1Weight -= _noteToHit.Points / 2;
                 _noteToHit.TriggerFloatingText("Missed!");

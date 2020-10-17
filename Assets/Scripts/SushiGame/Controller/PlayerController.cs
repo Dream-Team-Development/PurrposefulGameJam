@@ -31,7 +31,7 @@ namespace SushiGame.Controller
         
         [Header("Cat Info")]
         [SerializeField] private TMP_Text _weightDisplay;
-        [SerializeField] private float _weightLossRate;
+        //[SerializeField] private float _weightLossRate;
         [SerializeField] private Slider _energyDisplay;
         [SerializeField] private Text _sicknessDisplay;
         [SerializeField] private float _circleSpeed;
@@ -45,7 +45,7 @@ namespace SushiGame.Controller
 
         public CatObject CatType { get; set; }
 
-        //Properties for weight, energy and sickness effected by picked up items
+        //Properties for _weight, _energy and sickness effected by picked up items
         public float Weight
         {
             get => _weight;
@@ -84,12 +84,11 @@ namespace SushiGame.Controller
         {
             if (!SushiGameManager.Instance.Playing) return;
             
-            //Handles preventing start weight dropping below zero, reducing weight over time, and displaying information
-            if (_weight < 0) _weight = 0;
-            if (_weight > 0) _weight -= _weightLossRate * Time.deltaTime;
-            UpdateWeight();
-            //if (_weightDisplay) _weightDisplay.text = $"{(_weight / 100):#.0}kg"; // Convert grams to KG
-            //if (_energyDisplay) _energyDisplay.text = "Energy: " + _energy;
+            //Handles preventing start _weight dropping below zero, reducing _weight over time, and displaying information
+            //if (_weight < 0) _weight = 0;
+            //if (_weight > 0) _weight -= _weightLossRate * Time.deltaTime;
+            //UpdateWeight();
+            
             if (_sicknessDisplay) _sicknessDisplay.text = "Sickness: " + _sicknessLevel;
 
             //If the cat gets sick this will block movement and create new movement

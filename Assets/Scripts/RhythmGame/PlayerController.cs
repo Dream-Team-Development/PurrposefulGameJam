@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using TMPro;
+using UnityEngine;
 using UnityEngine.UI;
 
 namespace RhythmGame
@@ -8,7 +9,9 @@ namespace RhythmGame
     {
         [SerializeField] private MusicNote _notePrefab;
         [SerializeField] private Slider _energyBarSlider;
-        [SerializeField] protected float _energyChange;
+        [SerializeField] private TMP_Text _weightText;
+        [SerializeField] protected float _energyChange, _weightChange;
+        [SerializeField] protected float _weightLossRate;
         [SerializeField] protected HitPoint _hitPoint;
         [SerializeField] protected string[] _hitFeedback = {"Nice!"};
 
@@ -18,21 +21,34 @@ namespace RhythmGame
         [SerializeField] private int _totalDanceAnimations;
         [SerializeField] private int _animationSwitchRate;
 
-        protected float weight, energy;
+        protected float _weight, _energy;
         protected MusicNote _noteToHit;
         protected int _danceIndex;
         
         public CatObject CatType { get; set; }
+        public float Weight
+        {
+            get => _weight;
+            set
+            {
+                _weight = value;
+                UpdateWeight();
+            }
+        }
 
-        public float Weight { get; set; }
-        public float Energy { get; set; }
+        public float Energy
+        {
+            get => _energy;
+            set
+            { 
+                _energy = value;
+                UpdateEnergy();
+            }
+        }
 
 
         private void Start()
         {
-            // TODO: Energy should be set from PlayerPrefs
-            energy = 100;
-            
             _notePrefab.HitPos = _hitPoint.gameObject.transform.position;
 
             if (!_catAnimator) _catAnimator = GetComponent<Animator>();
@@ -53,10 +69,15 @@ namespace RhythmGame
         }
 
 
-        protected void UpdateEnergy(float energyReduction)
+        protected void UpdateWeight()
         {
-            energy -= energyReduction;
-            _energyBarSlider.value = energy / 100;
+            if (_weightText) _weightText.text = (Mathf.Round(_weight * 10f) / 10f) + "kg";
+        }
+
+
+        protected void UpdateEnergy()
+        {
+            _energyBarSlider.value = _energy / 100;
         }
 
 

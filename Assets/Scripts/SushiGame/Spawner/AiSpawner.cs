@@ -10,7 +10,7 @@ namespace SushiGame.Spawner
         [SerializeField] private float _timerReduction;
         [SerializeField] private float _elapsedTimeToReduce;
         [Header("Dependencies")]
-        [SerializeField, Tooltip("Order matches spawn weight below")] private GameObject[] _aiPrefab;
+        [SerializeField, Tooltip("Order matches spawn _weight below")] private GameObject[] _aiPrefab;
         [SerializeField, Tooltip("Descending chance from 100 to 0")] private int[] _spawnWeight;
         private float _spawnTimer;
         private float _timeElapsed;
