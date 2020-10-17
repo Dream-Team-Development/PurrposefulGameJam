@@ -3116,6 +3116,7 @@ MonoBehaviour:
   - {fileID: 787717045}
   _p1CatCard: {fileID: 283490162}
   _p2CatCard: {fileID: 483839536}
+  _startingWeightModifyer: 5
 --- !u!4 &1688764303
 Transform:
   m_ObjectHideFlags: 0

@@ -2,7 +2,7 @@
 using RhythmGame;
 using UnityEngine;
 
-public class RhythmGameManager : BaseGameManager
+public class RhythmGameManager : SushiGameManager
 {
     public static RhythmGameManager Instance;
     
@@ -47,5 +47,15 @@ public class RhythmGameManager : BaseGameManager
         if(_countdownText) _countdownText.gameObject.SetActive(false);
         _playing = true;
         SongManager.Instance.StartGame();
+    }
+
+     
+    protected override void GameOver()
+    {
+        PlayerManagerRhythm.Instance.SaveStats();
+          
+        if(_countdownText) _countdownText.gameObject.SetActive(false);
+        if(_endGame) _endGame.SetActive(true);
+        _playing = false;
     }
 }

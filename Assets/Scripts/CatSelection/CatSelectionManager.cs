@@ -12,6 +12,7 @@ namespace CatSelection
         [SerializeField] private Button _playButton;
         [SerializeField] private Button[] _selectButtons;
         [SerializeField] private CatCardManager _p1CatCard, _p2CatCard;
+        [SerializeField] private float _startingWeightModifyer;
 
         private CatObject[] _p1Options, _p2Options;
         private int _p1Index, _p2Index;
@@ -159,7 +160,13 @@ namespace CatSelection
             Debug.Log("Let the games begin");
 
             PlayerPrefs.SetInt("P1Cat", _p1CatChoice); 
-            PlayerPrefs.SetInt("P2Cat", _p2CatChoice); 
+            PlayerPrefs.SetInt("P2Cat", _p2CatChoice);
+            
+            PlayerPrefs.SetFloat("P1Weight", _p1Options[_p1CatChoice].idealWeight + _startingWeightModifyer);
+            PlayerPrefs.SetFloat("P2Weight", _p2Options[_p2CatChoice].idealWeight + _startingWeightModifyer);
+        
+            PlayerPrefs.SetFloat("P1Energy", 20);
+            PlayerPrefs.SetFloat("P2Energy", 20);
 
             SceneManager.LoadScene(sceneName);
         }

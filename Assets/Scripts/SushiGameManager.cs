@@ -2,9 +2,9 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class BaseGameManager : MonoBehaviour
+public class SushiGameManager : MonoBehaviour
 {
-     public static BaseGameManager Instance;
+     public static SushiGameManager Instance;
      
      [SerializeField] protected float _playTime;
      [SerializeField] protected GameObject _startInfo, _endGame;
@@ -19,7 +19,7 @@ public class BaseGameManager : MonoBehaviour
 
      protected virtual void Start()
      {
-          Instance = GetComponent<BaseGameManager>();
+          Instance = GetComponent<SushiGameManager>();
           
           if(_startInfo) _startInfo.SetActive(true);
           if(_endGame) _endGame.SetActive(false);
@@ -96,8 +96,10 @@ public class BaseGameManager : MonoBehaviour
      }
 
      
-     private void GameOver()
+     protected virtual void GameOver()
      {
+          PlayerManagerSushi.Instance.SaveStats();
+          
           if(_countdownText) _countdownText.gameObject.SetActive(false);
           if(_endGame) _endGame.SetActive(true);
           _playing = false;

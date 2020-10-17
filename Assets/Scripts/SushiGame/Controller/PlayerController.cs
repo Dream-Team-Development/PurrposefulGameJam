@@ -1,5 +1,4 @@
-﻿using System;
-using SushiGame.FoodStuff;
+﻿using SushiGame.FoodStuff;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,8 +10,8 @@ namespace SushiGame.Controller
     {
         [Header("Dependencies")]
         [SerializeField] private float _speed = 2f;
-        [SerializeField, Tooltip("Grams, convert to KG for display")] private float _startWeight;
-        [SerializeField] private float _startEnergy;
+        //[SerializeField, Tooltip("Grams, convert to KG for display")] private float _weight;
+        //[SerializeField] private float _energy;
         [SerializeField] private float _sicknessLevel;
         [SerializeField] private Rigidbody2D _rb;
 
@@ -33,13 +32,14 @@ namespace SushiGame.Controller
         [Header("Cat Info")]
         [SerializeField] private TMP_Text _weightDisplay;
         [SerializeField] private float _weightLossRate;
-        [SerializeField] private Text _energyDisplay;
+        [SerializeField] private Slider _energyDisplay;
         [SerializeField] private Text _sicknessDisplay;
         [SerializeField] private float _circleSpeed;
         [SerializeField] private float _circleSize;
 
         private bool _isSick;
 
+        private float _weight, _energy;
         private float _xMov;
         private float _yMov;
 
@@ -48,14 +48,22 @@ namespace SushiGame.Controller
         //Properties for weight, energy and sickness effected by picked up items
         public float Weight
         {
-            get => _startWeight;
-            set => _startWeight = value;
+            get => _weight;
+            set
+            {
+                _weight = value;
+                UpdateWeight();
+            }
         }
 
         public float Energy
         {
-            get => _startEnergy;
-            set => _startEnergy = value;
+            get => _energy;
+            set
+            { 
+                _energy = value;
+                UpdateEnergy();
+            }
         }
 
         public float SicknessLevel
@@ -67,17 +75,21 @@ namespace SushiGame.Controller
         private void Start()
         {
             _animator.runtimeAnimatorController = CatType.sushiGameAnimator;
+            
+            UpdateWeight();
+            UpdateEnergy();
         }
 
         private void FixedUpdate()
         {
-            if (!BaseGameManager.Instance.Playing) return;
+            if (!SushiGameManager.Instance.Playing) return;
             
             //Handles preventing start weight dropping below zero, reducing weight over time, and displaying information
-            if (_startWeight < 0) _startWeight = 0;
-            if (_startWeight > 0) _startWeight -= _weightLossRate * Time.deltaTime;
-            if (_weightDisplay) _weightDisplay.text = $"{(_startWeight / 100):#.0}kg"; // Convert grams to KG
-            if (_energyDisplay) _energyDisplay.text = "Energy: " + _startEnergy;
+            if (_weight < 0) _weight = 0;
+            if (_weight > 0) _weight -= _weightLossRate * Time.deltaTime;
+            UpdateWeight();
+            //if (_weightDisplay) _weightDisplay.text = $"{(_weight / 100):#.0}kg"; // Convert grams to KG
+            //if (_energyDisplay) _energyDisplay.text = "Energy: " + _energy;
             if (_sicknessDisplay) _sicknessDisplay.text = "Sickness: " + _sicknessLevel;
 
             //If the cat gets sick this will block movement and create new movement
@@ -118,14 +130,10 @@ namespace SushiGame.Controller
             else if (Input.GetKey(_rightKey)) _xMov = 1;
             else _xMov = 0;
             
+            UpdateAnimator();
+            
             //Set velocity to zero if no input (stops sliding)
             if (_yMov == 0 && _xMov == 0) _rb.velocity = Vector2.zero;
-            
-            if (_yMov > 0) _animator.SetInteger(_animatorParameter, 1);
-            else if(_xMov > 0) _animator.SetInteger(_animatorParameter, 2);
-            else if (_yMov < 0) _animator.SetInteger(_animatorParameter, 3);
-            else if (_xMov < 0) _animator.SetInteger(_animatorParameter, 4);
-            else _animator.SetInteger(_animatorParameter, 0);
 
             _rb.velocity += new Vector2(_xMov, _yMov).normalized * _speed;
             _rb.velocity = Vector2.ClampMagnitude(_rb.velocity, _speed);
@@ -137,6 +145,32 @@ namespace SushiGame.Controller
             var interact = hits.GetComponent<IInteract>();
             interact?.Interact(this);
         }
+
+
+        private void UpdateWeight()
+        {
+            //if (_weightDisplay) _weightDisplay.text = $"{(_weight / 100):#.0}kg";
+            if (_weightDisplay) _weightDisplay.text = (Mathf.Round(_weight * 10f) / 10f) + "kg";
+        }
+
+
+        private void UpdateEnergy()
+        {
+            if (!_energyDisplay) return;
+            
+            _energyDisplay.value = _energy / 100;
+        }
+
+
+        private void UpdateAnimator()
+        {
+            if (_yMov > 0) _animator.SetInteger(_animatorParameter, 1);
+            else if(_xMov > 0) _animator.SetInteger(_animatorParameter, 2);
+            else if (_yMov < 0) _animator.SetInteger(_animatorParameter, 3);
+            else if (_xMov < 0) _animator.SetInteger(_animatorParameter, 4);
+            else _animator.SetInteger(_animatorParameter, 0);
+        }
+        
         
         //Used to draw interaction area
         private void OnDrawGizmos()

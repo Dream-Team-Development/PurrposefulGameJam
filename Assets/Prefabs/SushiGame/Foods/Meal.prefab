@@ -117,6 +117,6 @@ MonoBehaviour:
   _radius: 2
   _startPos: 0
   _nextPos: 0
-  _weightGain: 10
+  _weightGain: 0.5
   _energyGain: 15
   _sicknessGain: 0

@@ -23,7 +23,10 @@ namespace RhythmGame
         protected int _danceIndex;
         
         public CatObject CatType { get; set; }
-        
+
+        public float Weight { get; set; }
+        public float Energy { get; set; }
+
 
         private void Start()
         {
