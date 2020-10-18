@@ -75,14 +75,14 @@ namespace RhythmGame
             else if (early)
             {
                 Energy = _energyChange * 2;
-                Weight = _weightChange;
+                Weight -= _weightChange;
                 UpdateStreak(false);
                 _noteToHit.TriggerFloatingText("Too early!");
             }
             else
             {
                 Energy = _energyChange / 2;
-                Weight = _weightChange;
+                Weight -= _weightChange;
                 UpdateStreak(false);
                 _noteToHit.TriggerFloatingText("Missed!");
             }

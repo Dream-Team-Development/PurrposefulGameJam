@@ -58,8 +58,8 @@ public class SushiGameManager : MonoBehaviour
                _countdownText.gameObject.SetActive(true);
                EndingCountdown();
           }
-          else if(_timeLeft <= 0)
-               GameOver();
+          // else if(_timeLeft <= 0)
+          //      GameOver();
      }
 
 
@@ -96,7 +96,6 @@ public class SushiGameManager : MonoBehaviour
           
           if (_endCountdown <= 0)
           {
-               _playing = false;
                GameOver();
           }
      }
@@ -108,6 +107,7 @@ public class SushiGameManager : MonoBehaviour
           
           if(_countdownText) _countdownText.gameObject.SetActive(false);
           if(_endGame) _endGame.SetActive(true);
+          _canStart = false;
           _playing = false;
      }
 }
