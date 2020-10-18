@@ -18,9 +18,31 @@ namespace SushiGame.Controller
         private float _lastYRadius;
 
         public Vector3[] Positions => _positions;
+
         //This is run entirely in editor for adjusting the node pathway for items to travel
         //You shouldn't need to edit this script
         #region Create Positions
+
+        private void Awake()
+        {
+            _positions = new Vector3[_segments];
+            _lastXRadius = _xRadius;
+            _lastYRadius = _yRadius;
+
+            var angle = 0f;
+            var rot = Quaternion.LookRotation(_centre.forward, _centre.up);
+            var thisPoint = Vector3.zero;
+
+            for (var i = 0; i < _segments; i++)
+            {
+                thisPoint.x = Mathf.Sin(Mathf.Deg2Rad * angle) * _xRadius;
+                thisPoint.y = Mathf.Cos(Mathf.Deg2Rad * angle) * _yRadius;
+
+                _positions[i] = rot * thisPoint + _centre.position;
+
+                angle += 360f / _segments;
+            }
+        }
 
         private void OnValidate()
         {
