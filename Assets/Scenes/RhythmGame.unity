@@ -832,7 +832,7 @@ MonoBehaviour:
   _energyBarSlider: {fileID: 2044784683}
   _weightText: {fileID: 962441357}
   _energyChange: 1
-  _weightChange: 0.1
+  _weightChange: 0.5
   _weightLossRate: 0.05
   _hitPoint: {fileID: 1934461354}
   _hitFeedback:
@@ -1988,6 +1988,7 @@ MonoBehaviour:
   _startInfo: {fileID: 0}
   _endGame: {fileID: 236732820}
   _countdownText: {fileID: 109019463}
+  _song: {fileID: 0}
 --- !u!4 &1909348484
 Transform:
   m_ObjectHideFlags: 0

@@ -31,7 +31,7 @@ namespace SushiGame.Controller
         
         [Header("Cat Info")]
         [SerializeField] private TMP_Text _weightDisplay;
-        //[SerializeField] private float _weightLossRate;
+        [SerializeField] private float _weightLossRate;
         [SerializeField] private Slider _energyDisplay;
         [SerializeField] private Text _sicknessDisplay;
         [SerializeField] private float _circleSpeed;
@@ -85,9 +85,9 @@ namespace SushiGame.Controller
             if (!SushiGameManager.Instance.Playing) return;
             
             //Handles preventing start _weight dropping below zero, reducing _weight over time, and displaying information
-            //if (_weight < 0) _weight = 0;
-            //if (_weight > 0) _weight -= _weightLossRate * Time.deltaTime;
-            //UpdateWeight();
+            if (_weight < 0) _weight = 0;
+            if (_weight > 0) _weight -= _weightLossRate * Time.deltaTime;
+            UpdateWeight();
             
             if (_sicknessDisplay) _sicknessDisplay.text = "Sickness: " + _sicknessLevel;
 
