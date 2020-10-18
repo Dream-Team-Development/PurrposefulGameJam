@@ -9,6 +9,8 @@ public class RhythmGameManager : SushiGameManager
     protected override void Start()
     {
         Instance = GetComponent<RhythmGameManager>();
+        
+        SoundManager.Instance.StopMusic();
           
         if(_startInfo) _startInfo.SetActive(true);
         if(_endGame) _endGame.SetActive(false);

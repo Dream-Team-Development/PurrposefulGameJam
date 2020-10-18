@@ -1,4 +1,5 @@
 ﻿using System;
+using TMPro.SpriteAssetUtilities;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,6 +8,7 @@ public class EndGameManager : MonoBehaviour
     private enum Result { Player1, Player2, Tie }
 
     [SerializeField] private CatObject[] _cats;
+    [SerializeField] private AudioClip _song;
 
     [Header("UI")]
     [SerializeField] private Text[] _winnerText;
@@ -22,6 +24,9 @@ public class EndGameManager : MonoBehaviour
     
     private void Start()
     {
+        SoundManager.Instance.ChangeTheTrack(_song);
+        SoundManager.Instance.PlayMusic();
+        
         _p1Cat = _cats[PlayerPrefs.GetInt("P1Cat")];
         _p2Cat = _cats[PlayerPrefs.GetInt("P2Cat")];
         

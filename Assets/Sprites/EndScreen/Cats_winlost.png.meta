@@ -1,0 +1,478 @@
+fileFormatVersion: 2
+guid: b382ad9e77bb59f48a7d3bd09ed5518f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 964515487876011374
+    second: Cats_winlost_0
+  - first:
+      213: 7220952483813837248
+    second: Cats_winlost_1
+  - first:
+      213: 3070438791495803122
+    second: Cats_winlost_2
+  - first:
+      213: 1924816881735653156
+    second: Cats_winlost_3
+  - first:
+      213: 4372537745755639305
+    second: Cats_winlost_4
+  - first:
+      213: 7804202415863708271
+    second: Cats_winlost_5
+  - first:
+      213: 8111532204506308177
+    second: Cats_winlost_6
+  - first:
+      213: 8058539203061745024
+    second: Cats_winlost_7
+  - first:
+      213: 2565685836096894271
+    second: Cats_winlost_8
+  - first:
+      213: -5714130482965690239
+    second: Cats_winlost_9
+  - first:
+      213: 2018579891090434320
+    second: Cats_winlost_10
+  - first:
+      213: -9045167923208274965
+    second: Cats_winlost_11
+  - first:
+      213: -4129466714593413856
+    second: Cats_winlost_12
+  - first:
+      213: 2580680429111095576
+    second: Cats_winlost_13
+  - first:
+      213: -8887018221595885180
+    second: Cats_winlost_14
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: 1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Cats_winlost_0
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 12592
+        width: 1337
+        height: 2739
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e65563bd9b5a26d00800000000000000
+      internalID: 964515487876011374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cats_winlost_1
+      rect:
+        serializedVersion: 2
+        x: 3142
+        y: 12394
+        width: 2350
+        height: 3220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c9c2b9960af53460800000000000000
+      internalID: 7220952483813837248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cats_winlost_2
+      rect:
+        serializedVersion: 2
+        x: 6381
+        y: 12362
+        width: 2058
+        height: 3197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f0efaf10d36c9a20800000000000000
+      internalID: 3070438791495803122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cats_winlost_3
+      rect:
+        serializedVersion: 2
+        x: 5378
+        y: 12309
+        width: 29
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 427578d71c256ba10800000000000000
+      internalID: 1924816881735653156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cats_winlost_4
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 8804
+        width: 1794
+        height: 2740
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90e80ceb9ef5eac30800000000000000
+      internalID: 4372537745755639305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cats_winlost_5
+      rect:
+        serializedVersion: 2
+        x: 3545
+        y: 8758
+        width: 1548
+        height: 2786
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6a3dc0bfb81e4c60800000000000000
+      internalID: 7804202415863708271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cats_winlost_6
+      rect:
+        serializedVersion: 2
+        x: 6526
+        y: 8590
+        width: 1760
+        height: 3175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15e5db13093f19070800000000000000
+      internalID: 8111532204506308177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cats_winlost_7
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 4825
+        width: 1337
+        height: 2793
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0850e0f85bea5df60800000000000000
+      internalID: 8058539203061745024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cats_winlost_8
+      rect:
+        serializedVersion: 2
+        x: 3142
+        y: 4626
+        width: 2350
+        height: 3221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f357ec1aca52b9320800000000000000
+      internalID: 2565685836096894271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cats_winlost_9
+      rect:
+        serializedVersion: 2
+        x: 6380
+        y: 4595
+        width: 2059
+        height: 3199
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 188499ab99453b0b0800000000000000
+      internalID: -5714130482965690239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cats_winlost_10
+      rect:
+        serializedVersion: 2
+        x: 5378
+        y: 4538
+        width: 30
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 019213f47bf630c10800000000000000
+      internalID: 2018579891090434320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cats_winlost_11
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 1037
+        width: 1794
+        height: 2831
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bebb96b72bb197280800000000000000
+      internalID: -9045167923208274965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cats_winlost_12
+      rect:
+        serializedVersion: 2
+        x: 3545
+        y: 991
+        width: 1548
+        height: 2785
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0253cd4e6ef21b6c0800000000000000
+      internalID: -4129466714593413856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cats_winlost_13
+      rect:
+        serializedVersion: 2
+        x: 6526
+        y: 823
+        width: 1760
+        height: 3183
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81138ff5d2b60d320800000000000000
+      internalID: 2580680429111095576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cats_winlost_14
+      rect:
+        serializedVersion: 2
+        x: 5469
+        y: 670
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4818a5d4308faa480800000000000000
+      internalID: -8887018221595885180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 4d7b7298496dc624482374b558127c99
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -693,7 +693,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eaba129175d676845bfa5bd3e3d6afad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  __spawnRate: 3
+  __spawnRate: 1.5
   _timerReduction: 0
   _elapsedTimeToReduce: 10
   _aiPrefab:
@@ -2997,10 +2997,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad95918a1d22f534499b4b43bc126af4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playTime: 30
+  _playTime: 60
   _startInfo: {fileID: 2136222492}
   _endGame: {fileID: 1012831312}
   _countdownText: {fileID: 1078090643}
+  _song: {fileID: 8300000, guid: d02e3c0ee8807754bbd44accd485bdaa, type: 3}
 --- !u!4 &2019584721
 Transform:
   m_ObjectHideFlags: 0

@@ -831,8 +831,8 @@ MonoBehaviour:
   _notePrefab: {fileID: 5588424565085806711, guid: f205a71a46dcb9a47b7c428d56360d45, type: 3}
   _energyBarSlider: {fileID: 2044784683}
   _weightText: {fileID: 962441357}
-  _energyChange: 4
-  _weightChange: 0.2
+  _energyChange: 1
+  _weightChange: 0.1
   _weightLossRate: 0.05
   _hitPoint: {fileID: 1934461354}
   _hitFeedback:
@@ -1984,7 +1984,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59626ff5da25ac8489164eaaa4098938, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playTime: 30
+  _playTime: 60
   _startInfo: {fileID: 0}
   _endGame: {fileID: 236732820}
   _countdownText: {fileID: 109019463}

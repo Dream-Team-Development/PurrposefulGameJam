@@ -242,6 +242,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 9933949d6aaad7649873dc0a5d297ed9, type: 2}
   - {fileID: 11400000, guid: 11f40af6051e7db47bf6a23737c491f6, type: 2}
   - {fileID: 11400000, guid: 989e2de1b51a65744895b3f539554e8c, type: 2}
+  _song: {fileID: 8300000, guid: 467ad7ed1b3c12049ae9d4a5bd456417, type: 3}
   _winnerText:
   - {fileID: 389322588}
   - {fileID: 1183867598}
@@ -831,6 +832,10 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 61.023193
       objectReference: {fileID: 0}
+    - target: {fileID: 2095699173991549590, guid: 5f753f3e1b2b70741894f2c3a341572f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 2580680429111095576, guid: b382ad9e77bb59f48a7d3bd09ed5518f, type: 3}
     - target: {fileID: 2095699173991549591, guid: 5f753f3e1b2b70741894f2c3a341572f, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -267.2
@@ -1081,6 +1086,10 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 59.946922
       objectReference: {fileID: 0}
+    - target: {fileID: 2095699173991549590, guid: 5f753f3e1b2b70741894f2c3a341572f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 4372537745755639305, guid: b382ad9e77bb59f48a7d3bd09ed5518f, type: 3}
     - target: {fileID: 2095699173991549591, guid: 5f753f3e1b2b70741894f2c3a341572f, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -256.01996

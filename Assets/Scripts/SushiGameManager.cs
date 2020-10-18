@@ -1,4 +1,5 @@
 ﻿using System;
+using TMPro.EditorUtilities;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,6 +10,7 @@ public class SushiGameManager : MonoBehaviour
      [SerializeField] protected float _playTime;
      [SerializeField] protected GameObject _startInfo, _endGame;
      [SerializeField] protected Text _countdownText;
+     [SerializeField] private AudioClip _song;
 
      protected float _timeLeft, _startCountdown, _endCountdown;
      protected bool _canStart, _playing;
@@ -20,6 +22,9 @@ public class SushiGameManager : MonoBehaviour
      protected virtual void Start()
      {
           Instance = GetComponent<SushiGameManager>();
+          
+          SoundManager.Instance.ChangeTheTrack(_song);
+          SoundManager.Instance.PlayMusic();
           
           if(_startInfo) _startInfo.SetActive(true);
           if(_endGame) _endGame.SetActive(false);
