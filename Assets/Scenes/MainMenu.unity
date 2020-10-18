@@ -248,7 +248,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -1184,10 +1184,10 @@ RectTransform:
   m_Father: {fileID: 1281270175}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 31.8, y: 0.000030517578}
-  m_SizeDelta: {x: -762.84546, y: -402.52396}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 53.2, y: -4.9}
+  m_SizeDelta: {x: 38.8425, y: 43.29145}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1041427691
 MonoBehaviour:
@@ -1286,10 +1286,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 0823a80c8d378a140abeac5021266673, type: 3}
-    m_FontSize: 17
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 0
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -1297,12 +1297,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Help! These cats haven''t been looked after very well and need to be de-chonked!
-
-
-    Play
-    against a friend to compete in getting your chosen cat to it''s ideal weight
-    - whoever gets closest wins!
+  m_Text: 'Play against a friend in making sure your chosen cat stays at its chosen
+    weight by making sure they eat the right things and get the right exercise -
+    you don''t want a chonky cat!
 
 
     Level 1 : Feed your cat! Make sure your cat
@@ -1312,8 +1309,7 @@ MonoBehaviour:
 
     Level 2: Exercise your cat! Get your
     cat dancing by hitting the correct buttons at the right time, but be careful
-    - you don''t want to lose too much weight by hitting too early, or not lose any
-    weight by missing.'
+    - if you hit too early or too late then you lose too much weight.'
 --- !u!222 &1076679469
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2222,7 +2218,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f87d108b48d8944595902bfc70a87bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _song: {fileID: 8300000, guid: 467ad7ed1b3c12049ae9d4a5bd456417, type: 3}
+  _song: {fileID: 8300000, guid: cc33cbb19b9b16d429114748308756db, type: 3}
   _soundManager: {fileID: 25728532}
 --- !u!4 &1932357022
 Transform:

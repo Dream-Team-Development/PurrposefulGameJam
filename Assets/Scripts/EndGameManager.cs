@@ -33,8 +33,8 @@ public class EndGameManager : MonoBehaviour
         _p1EndWeight = PlayerPrefs.GetFloat("P1Weight");
         _p2EndWeight = PlayerPrefs.GetFloat("P2Weight");
 
-        _p1GoalDiff = _p1EndWeight - _p1Cat.idealWeight;
-        _p2GoalDiff = _p2EndWeight - _p2Cat.idealWeight;
+        _p1GoalDiff = _p1Cat.idealWeight - _p1EndWeight;
+        _p2GoalDiff = _p2Cat.idealWeight - _p2EndWeight;
 
         if (_p1GoalDiff == _p2GoalDiff)
             _result = Result.Tie;

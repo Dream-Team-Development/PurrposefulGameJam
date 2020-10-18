@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RhythmGameManager : SushiGameManager
 {
-    public static RhythmGameManager Instance;
+    public new static RhythmGameManager Instance;
     
     protected override void Start()
     {

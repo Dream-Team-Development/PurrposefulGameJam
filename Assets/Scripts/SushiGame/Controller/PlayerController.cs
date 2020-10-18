@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 namespace SushiGame.Controller
 {
-    [RequireComponent(typeof(Rigidbody2D), typeof(Collider2D))]
+    [RequireComponent(typeof(Rigidbody2D), typeof(Collider2D), typeof(SpriteRenderer))]
     public class PlayerController : MonoBehaviour
     {
         [Header("Dependencies")]
@@ -30,6 +30,7 @@ namespace SushiGame.Controller
         [SerializeField] private float _radius;
         
         [Header("Cat Info")]
+        [SerializeField] private SpriteRenderer _renderer;
         [SerializeField] private TMP_Text _weightDisplay;
         [SerializeField] private float _weightLossRate;
         [SerializeField] private Slider _energyDisplay;
@@ -94,6 +95,9 @@ namespace SushiGame.Controller
             //If the cat gets sick this will block movement and create new movement
             if (_sicknessLevel > 0)
             {
+                _renderer.color = Color.green;
+                _animator.SetInteger(_animatorParameter, 3);
+                
                 _sicknessLevel -= Time.deltaTime;
                 
                 var direction = Vector3.zero - transform.position;
@@ -116,6 +120,7 @@ namespace SushiGame.Controller
             if (_sicknessLevel < 0)
             {
                 _sicknessLevel = 0;
+                _renderer.color = Color.white;
                 _animator.SetInteger(_animatorParameter, 0);
             }
             

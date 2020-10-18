@@ -96,6 +96,7 @@ public class SushiGameManager : MonoBehaviour
           
           if (_endCountdown <= 0)
           {
+               _playing = false;
                GameOver();
           }
      }

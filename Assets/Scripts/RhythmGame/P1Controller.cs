@@ -11,8 +11,8 @@ namespace RhythmGame
             if (!RhythmGameManager.Instance.Playing) return;
             if (!_noteToHit) return;
             
-            if (_weight < 0) _weight = 0;
-            if (_weight > 0) _weight -= _weightLossRate * Time.deltaTime;
+            //if (_weight < 0) _weight = 0;
+            //if (_weight > 0) _weight -= _weightLossRate * Time.deltaTime;
             
             switch (_noteToHit.ThisDirection)
             {

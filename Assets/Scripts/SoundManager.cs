@@ -10,7 +10,12 @@ public class SoundManager : MonoBehaviour
 
     private void Start()
     {
-        Instance = GetComponent<SoundManager>();
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+        } else {
+            Instance = this;
+        }
         
         if (!_audio) _audio = GetComponent<AudioSource>();
         

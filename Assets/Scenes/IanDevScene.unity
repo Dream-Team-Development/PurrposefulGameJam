@@ -664,7 +664,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _segments: 32
   _xRadius: 18.69
-  _yRadius: 10.9
+  _yRadius: 11.65
   _centre: {fileID: 987800969}
   _colour: {r: 0, g: 0, b: 1, a: 1}
 --- !u!4 &987800969
@@ -675,7 +675,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 987800967}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.4, y: -2.3, z: 0}
+  m_LocalPosition: {x: -1, y: -2.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1025,23 +1025,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3651125159918913812, guid: 7272c39be57759d49965e0b53d2295d5, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3651125159918913812, guid: 7272c39be57759d49965e0b53d2295d5, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3651125159963159238, guid: 7272c39be57759d49965e0b53d2295d5, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3651125159963159238, guid: 7272c39be57759d49965e0b53d2295d5, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3651125159963159238, guid: 7272c39be57759d49965e0b53d2295d5, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3651125160419268664, guid: 7272c39be57759d49965e0b53d2295d5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1131,6 +1131,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: P1Energy
       objectReference: {fileID: 0}
+    - target: {fileID: 3651125160419268667, guid: 7272c39be57759d49965e0b53d2295d5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7272c39be57759d49965e0b53d2295d5, type: 3}
 --- !u!224 &1304259212 stripped
@@ -1169,23 +1173,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3651125159918913812, guid: 7272c39be57759d49965e0b53d2295d5, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3651125159918913812, guid: 7272c39be57759d49965e0b53d2295d5, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3651125159963159238, guid: 7272c39be57759d49965e0b53d2295d5, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3651125159963159238, guid: 7272c39be57759d49965e0b53d2295d5, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3651125159963159238, guid: 7272c39be57759d49965e0b53d2295d5, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3651125160419268664, guid: 7272c39be57759d49965e0b53d2295d5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1274,6 +1278,10 @@ PrefabInstance:
     - target: {fileID: 3651125160419268667, guid: 7272c39be57759d49965e0b53d2295d5, type: 3}
       propertyPath: m_Name
       value: P2Energy
+      objectReference: {fileID: 0}
+    - target: {fileID: 3651125160419268667, guid: 7272c39be57759d49965e0b53d2295d5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7272c39be57759d49965e0b53d2295d5, type: 3}
@@ -2345,8 +2353,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.17, y: -0.05}
-  m_Size: {x: 5.18, y: 0.0001}
+  m_Offset: {x: 0.11, y: -0.08}
+  m_Size: {x: 5.88, y: 0.83}
   m_Direction: 0
 --- !u!50 &1719101105
 Rigidbody2D:
@@ -2391,8 +2399,10 @@ MonoBehaviour:
   _animator: {fileID: 1719101109}
   _animatorParameter: Direction
   _interactKey: 305
-  _radius: 6
+  _radius: 6.5
+  _renderer: {fileID: 1719101107}
   _weightDisplay: {fileID: 1349589032}
+  _weightLossRate: 0.05
   _energyDisplay: {fileID: 1349774806}
   _sicknessDisplay: {fileID: 621682976}
   _circleSpeed: 5
@@ -2437,7 +2447,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 6735193216249671937, guid: a2c50db1a52297c4eab0bb0daa46f1cb, type: 3}
+  m_Sprite: {fileID: 5323938341510120659, guid: 09a5e7f66ee8ecf46bb1c6a2c97c502f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3001,7 +3011,7 @@ MonoBehaviour:
   _startInfo: {fileID: 2136222492}
   _endGame: {fileID: 1012831312}
   _countdownText: {fileID: 1078090643}
-  _song: {fileID: 8300000, guid: d02e3c0ee8807754bbd44accd485bdaa, type: 3}
+  _song: {fileID: 8300000, guid: c7cfabc17705e254fb795bfc752132c9, type: 3}
 --- !u!4 &2019584721
 Transform:
   m_ObjectHideFlags: 0
@@ -3059,8 +3069,10 @@ MonoBehaviour:
   _animator: {fileID: 2085331967}
   _animatorParameter: Direction
   _interactKey: 101
-  _radius: 6
+  _radius: 6.5
+  _renderer: {fileID: 2085331963}
   _weightDisplay: {fileID: 411042658}
+  _weightLossRate: 0.05
   _energyDisplay: {fileID: 1304259213}
   _sicknessDisplay: {fileID: 621682976}
   _circleSpeed: 5
@@ -3105,7 +3117,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -7119276152552282075, guid: 41dd5b2c1f572aa4a88a54e65900b9c0, type: 3}
+  m_Sprite: {fileID: -6095273862888266276, guid: a43cd7057b634e94d8f6aec4c545706a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3143,8 +3155,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.17, y: -0.05}
-  m_Size: {x: 5.18, y: 0.0001}
+  m_Offset: {x: 0.11, y: -0.08}
+  m_Size: {x: 5.88, y: 0.83}
   m_Direction: 0
 --- !u!50 &2085331966
 Rigidbody2D:

@@ -16,7 +16,7 @@ MonoBehaviour:
   profileImage: {fileID: 21300000, guid: 76a9233301ecda24ab696d38faa83118, type: 3}
   idealWeight: 8
   sexImage: {fileID: 9120299909250688550, guid: b89cd3f98d48afb4abe47fe224da6fa4, type: 3}
-  fact: 
+  fact: Ragdolls are large cats which mean they can be prone to weight issues
   sushiGameAnimator: {fileID: 9100000, guid: 0c50950de0e680941a054bb9f9a018e7, type: 2}
   rhythmGameAnimator: {fileID: 9100000, guid: 537295f4dcfd1bc4a957a5bc6481f577, type: 2}
   winImage: {fileID: 2565685836096894271, guid: b382ad9e77bb59f48a7d3bd09ed5518f, type: 3}

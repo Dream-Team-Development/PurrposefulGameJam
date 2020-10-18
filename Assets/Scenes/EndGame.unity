@@ -242,7 +242,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 9933949d6aaad7649873dc0a5d297ed9, type: 2}
   - {fileID: 11400000, guid: 11f40af6051e7db47bf6a23737c491f6, type: 2}
   - {fileID: 11400000, guid: 989e2de1b51a65744895b3f539554e8c, type: 2}
-  _song: {fileID: 8300000, guid: 467ad7ed1b3c12049ae9d4a5bd456417, type: 3}
+  _song: {fileID: 8300000, guid: cc33cbb19b9b16d429114748308756db, type: 3}
   _winnerText:
   - {fileID: 389322588}
   - {fileID: 1183867598}

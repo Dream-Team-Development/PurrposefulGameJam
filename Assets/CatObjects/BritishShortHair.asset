@@ -16,7 +16,8 @@ MonoBehaviour:
   profileImage: {fileID: 3161551838633141779, guid: 908503973f7c98145bea173fc16e433b, type: 3}
   idealWeight: 4
   sexImage: {fileID: -3344345146683644454, guid: b89cd3f98d48afb4abe47fe224da6fa4, type: 3}
-  fact: 
+  fact: British short hairs are sturdy but need lots of exercise so they don't become
+    pudgy
   sushiGameAnimator: {fileID: 9100000, guid: 7cb8689509d2e0e4ca3605ccf1d26dab, type: 2}
   rhythmGameAnimator: {fileID: 9100000, guid: 8ef69c3aa341add479ccb023d3e0a41e, type: 2}
   winImage: {fileID: 2580680429111095576, guid: b382ad9e77bb59f48a7d3bd09ed5518f, type: 3}

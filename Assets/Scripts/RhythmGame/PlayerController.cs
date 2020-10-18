@@ -56,6 +56,9 @@ namespace RhythmGame
 
             _danceIndex = 0;
             _totalDanceAnimations *= _animationSwitchRate;
+            
+            UpdateWeight();
+            UpdateEnergy();
         }
 
 
