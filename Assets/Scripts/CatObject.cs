@@ -1,5 +1,4 @@
-﻿using UnityEditor.Animations;
-using UnityEngine;
+﻿using UnityEngine;
 
 [CreateAssetMenu(fileName = "Cat", menuName = "Cat")]
 
@@ -14,8 +13,8 @@ public class CatObject : ScriptableObject
     public string fact;
 
     [Header("Animations")]
-    public AnimatorController sushiGameAnimator;
-    public AnimatorController rhythmGameAnimator;
+    public RuntimeAnimatorController sushiGameAnimator;
+    public RuntimeAnimatorController rhythmGameAnimator;
 
     [Header("EndResults")]
     public Sprite winImage;

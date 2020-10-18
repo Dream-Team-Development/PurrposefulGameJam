@@ -13,12 +13,10 @@ namespace SushiGame
 
         private void Awake()
         {
-            if (!_renderer) _renderer = GetComponent<SpriteRenderer>();
-            
-            //StartCoroutine(ColorChange());
+            StartCoroutine(ColorChange());
         }
 
-        public IEnumerator ColorChange()
+        private IEnumerator ColorChange()
         {
             var alwaysTrue = true;
             var current = Random.Range(0, _colors.Length);

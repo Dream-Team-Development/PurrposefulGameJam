@@ -663,8 +663,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _segments: 32
-  _xRadius: 18.69
-  _yRadius: 11.65
+  _xRadius: 19.1
+  _yRadius: 11.8
   _centre: {fileID: 987800969}
   _colour: {r: 0, g: 0, b: 1, a: 1}
 --- !u!4 &987800969
