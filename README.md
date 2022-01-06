@@ -10,7 +10,12 @@ Check out the [itch.io](https://lizziebriggs.itch.io/purrty-time) page to downlo
 
 ### Screenshots
 
-![]()
+![Main menu](https://user-images.githubusercontent.com/50921515/148381557-484d2b21-1904-4180-887a-66dda4268e82.PNG)
+![Cat selection](https://user-images.githubusercontent.com/50921515/148381562-01c22c1b-276e-4a1c-b08a-3ac157a6e063.PNG)
+![Conveyor belt mini game](https://user-images.githubusercontent.com/50921515/148381552-abc7e7ec-93d9-442a-b1c6-ff5b3313ab06.PNG)
+![Rhythm mini game](https://user-images.githubusercontent.com/50921515/148381558-288fb92f-f919-43fa-983e-4972163ed999.PNG)
+![End game](https://user-images.githubusercontent.com/50921515/148381550-973f44b6-a3c8-4b06-88c5-3817661d8fa3.PNG)
+![How to play](https://user-images.githubusercontent.com/50921515/148381554-2a16fdfe-5eed-4221-98c7-05e781fb0df2.PNG)
 
 ### Credits
 
