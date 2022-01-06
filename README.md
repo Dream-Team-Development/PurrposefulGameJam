@@ -19,16 +19,16 @@ Check out the [itch.io](https://lizziebriggs.itch.io/purrty-time) page to downlo
 
 ### Credits
 
-Code:
+#### Code
 
-Ian Barrow ([GitHub](https://github.com/Banananaman91), [LinkedIn](https://www.linkedin.com/in/ian-barrow/))
+Ian Barrow - [GitHub](https://github.com/Banananaman91), [LinkedIn](https://www.linkedin.com/in/ian-barrow/)
 
-Lizzie Briggs ([GitHub](https://github.com/lizziebriggs), [LinkedIn](https://www.linkedin.com/in/lizzie-briggs/))
+Lizzie Briggs - [GitHub](https://github.com/lizziebriggs), [LinkedIn](https://www.linkedin.com/in/lizzie-briggs/)
 
-Art:
+#### Art
 
-Leena Jarvenpaa ([Insta](https://www.instagram.com/leenajvpart/))
+Leena Jarvenpaa - [Insta](https://www.instagram.com/leenajvpart/)
 
-Music:
+#### Music
 
-iNTELLiGENTLY BRAiNLESS ([SoundCloud](https://m.soundcloud.com/intelligently-brainless), [Insta](https://www.instagram.com/intelligentlybrainless/))
+iNTELLiGENTLY BRAiNLESS - [SoundCloud](https://m.soundcloud.com/intelligently-brainless), [Insta](https://www.instagram.com/intelligentlybrainless/)
